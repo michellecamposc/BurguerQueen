@@ -5,13 +5,13 @@ import { KitchenPage } from '../pages/KitchenPage';
 
 //  Router
 export const AppRouter = () => {
-  return (
-    <>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='order' element={<TakeOrder />} />
-        <Route path='kitchen' element={<KitchenPage />} />
-      </Routes>
-    </>
-  );
+	return (
+		<>
+			<Routes>
+				<Route path='/' element={<HomePage />} />
+				<Route path='order' element={<TakeOrder />} />
+				<Route path='kitchen' element={<KitchenPage />} />
+			</Routes>
+		</>
+	);
 };
