@@ -5,104 +5,104 @@
       "name": "Café americano",
       "description": "Café doble de carácter con notas de dulce caramelo y matices de verde silvestre.",
       "price": 3.200,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/cafenegro.png"
     },
     {
       "id": 2,
       "name": "Café con leche",
       "description": "Es un Café de carácter con sabor a avellanada con leche a elección del cliente.",
       "price": 3.200,
-      "image":"/assets/cafenegro.png"
+      "image":"/public/cafeconleche.png"
     },
     {
       "id": 3,
       "name": "Sandwich de jamón y queso",
       "description": "Delicioso sandwich de jamón y queso mozarella en pan de masa madre.",
       "price": 5.200,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/sandwichJ&Q.png"
     },
     {
       "id": 4,
       "name": "Jugo de frutas",
       "description": "Variedad de frutas naturales y orgánicas según la temporada.",
       "price": 2.500,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/jugofrutas.png"
     }
   ],
   
-  "Almuerzo/Cena": [
+  "Almuerzo": [
     {
       "id": 1,
       "name": "Hamburguesa simple",
       "description": "Hamburguesa con tomate, lechuga, cebolla, salsa de tomate y proteína elección",
       "price": 6.000,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/simpleburguer.png"
     },
     {
       "id": 2,
       "name": "Hamburguesa doble",
       "description": "Hamburguesa con tomate, lechuga, tocineta, ketchup y doble proteína de elección.",
       "price": 8.500,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/dobleburguer.png"
     },
     {
       "id": 3,
       "name": "Papas fritas",
       "description": "Deliciosas papas fritas naturales con salsa de ajo.",
       "price": 3.500,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/papasfritas.png"
     },
     {
       "id": 4,
       "name": "Aros de cebolla",
       "description": "Aros de cebolla naturales con salsa especial de la casa.",
       "price": 3.500,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/aros.png"
     },
     {
       "id": 5,
       "name": "Extra huevo",
       "description": "Huevo frito 1/und",
       "price": 1.200,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/huevo.png"
     },
     {
       "id": 6,
       "name": "Extra queso",
       "description": "Adicional de queso mozarella",
       "price": 5.00,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/queso.png"
     }
   ],
   
-  "Para tomar": [
+  "Bebidas": [
     {
       "id": 1,
       "name": "Agua 500ml",
       "description": "Agua mineral sin gas 500ml",
       "price": 1.000,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/agua.png"
     },
     {
       "id": 2,
       "name":"Agua 750ml",
       "description": "Agua mineral sin gas 750ml",
       "price": 1.500,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/agua.png"
     },
     {
       "id": 3,
       "name": "Bebida 500ml",
       "description": "Gaseosa diferentes sabores",
       "price": 2.000,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/gaseosa.png"
     },
     {
       "id": 4,
       "name": "Bebida 750ml",
       "description": "Gaseosa diferentes sabores",
       "price": 3.200,
-      "image": "/assets/cafenegro.png"
+      "image": "/public/gaseosa.png"
     }
   ]
 }

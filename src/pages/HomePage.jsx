@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
-import '../styles/home-page.css';
+import styles from '../styles/HomePage.module.css';
 
 export const HomePage = () => {
 	return (
-		<div className='homeContainer'>
-			<section className='buttonsContainer'>
+		<div id={styles.homeContainer}>
+			<section id={styles.buttonsContainer}>
 				<img src='public/dejaBurgLogo.png' />
 				<Link to='order'>
-					<button className='orderBtn'>Tomar pedido</button>
+					<button id={styles.orderBtn}>Tomar pedido</button>
 				</Link>
 				<Link to='kitchen'>
-					<button className='kitchenBtn'>Cocina</button>
+					<button id={styles.kitchenBtn}>Cocina</button>
 				</Link>
 			</section>
 		</div>
