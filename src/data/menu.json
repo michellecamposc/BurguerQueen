@@ -1,107 +1,107 @@
-{
-  "Desayuno": [
+ {
+  "Breakfast": [
     {
       "id": 1,
       "name": "Café americano",
       "description": "Café doble de carácter con notas de dulce caramelo y matices de verde silvestre.",
-      "price": 3.200,
+      "price": 3200,
       "image": "/public/cafenegro.png"
     },
     {
       "id": 2,
       "name": "Café con leche",
       "description": "Es un Café de carácter con sabor a avellanada con leche a elección del cliente.",
-      "price": 3.200,
+      "price": 3200,
       "image":"/public/cafeconleche.png"
     },
     {
       "id": 3,
       "name": "Sandwich de jamón y queso",
       "description": "Delicioso sandwich de jamón y queso mozarella en pan de masa madre.",
-      "price": 5.200,
+      "price": 5200,
       "image": "/public/sandwichJ&Q.png"
     },
     {
       "id": 4,
       "name": "Jugo de frutas",
       "description": "Variedad de frutas naturales y orgánicas según la temporada.",
-      "price": 2.500,
+      "price": 2500,
       "image": "/public/jugofrutas.png"
     }
   ],
   
-  "Almuerzo": [
+  "Lunch": [
     {
       "id": 1,
       "name": "Hamburguesa simple",
       "description": "Hamburguesa con tomate, lechuga, cebolla, salsa de tomate y proteína elección",
-      "price": 6.000,
+      "price": 6000,
       "image": "/public/simpleburguer.png"
     },
     {
       "id": 2,
       "name": "Hamburguesa doble",
       "description": "Hamburguesa con tomate, lechuga, tocineta, ketchup y doble proteína de elección.",
-      "price": 8.500,
+      "price": 8500,
       "image": "/public/dobleburguer.png"
     },
     {
       "id": 3,
       "name": "Papas fritas",
       "description": "Deliciosas papas fritas naturales con salsa de ajo.",
-      "price": 3.500,
+      "price": 3500,
       "image": "/public/papasfritas.png"
     },
     {
       "id": 4,
       "name": "Aros de cebolla",
       "description": "Aros de cebolla naturales con salsa especial de la casa.",
-      "price": 3.500,
+      "price": 3500,
       "image": "/public/aros.png"
     },
     {
       "id": 5,
       "name": "Extra huevo",
       "description": "Huevo frito 1/und",
-      "price": 1.200,
+      "price": 1200,
       "image": "/public/huevo.png"
     },
     {
       "id": 6,
       "name": "Extra queso",
       "description": "Adicional de queso mozarella",
-      "price": 5.00,
+      "price": 1200,
       "image": "/public/queso.png"
     }
   ],
   
-  "Bebidas": [
+  "Beverages": [
     {
       "id": 1,
       "name": "Agua 500ml",
       "description": "Agua mineral sin gas 500ml",
-      "price": 1.000,
+      "price": 1000,
       "image": "/public/agua.png"
     },
     {
       "id": 2,
       "name":"Agua 750ml",
       "description": "Agua mineral sin gas 750ml",
-      "price": 1.500,
+      "price": 1500,
       "image": "/public/agua.png"
     },
     {
       "id": 3,
       "name": "Bebida 500ml",
       "description": "Gaseosa diferentes sabores",
-      "price": 2.000,
+      "price": 2000,
       "image": "/public/gaseosa.png"
     },
     {
       "id": 4,
       "name": "Bebida 750ml",
       "description": "Gaseosa diferentes sabores",
-      "price": 3.200,
+      "price": 3200,
       "image": "/public/gaseosa.png"
     }
   ]

@@ -1,7 +1,8 @@
 import { BillSection } from '../components/BillSection';
-import { CardProduct } from '../components/CardProduct';
+import { ProductCard } from '../components/ProductCard';
 import { NavBar, SelectTable, MenuOptions } from '../components/NavBar';
 import styles from '../styles/TakeOrder.module.css';
+import menu from '../data/menu.json';
 
 export const TakeOrder = () => {
 	return (
@@ -13,13 +14,22 @@ export const TakeOrder = () => {
 				<section id={styles.productsContainer}>
 					<SelectTable />
 					<MenuOptions />
-					<CardProduct />
+					<div id={styles.justCardProducts}>
+						{menu.Breakfast.map((item, index) => (
+							<ProductCard key={index} item={item} />
+						))}
+						{menu.Lunch.map((item, index) => (
+							<ProductCard key={index} item={item} />
+						))}
+						{menu.Beverages.map((item, index) => (
+							<ProductCard key={index} item={item} />
+						))}
+					</div>
 				</section>
-				{/* 		<section id={styles.billContainer}>
-					<BillSection></BillSection>
-				</section> */}
+				<section id={styles.billContainer}>
+					<BillSection />
+				</section>
 			</div>
-			<div id={styles.billContainer}></div>
 		</div>
 	);
 };
