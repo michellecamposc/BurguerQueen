@@ -91,6 +91,15 @@ export const MenuOptions = () => {
 						<FaCocktail />
 						Para tomar
 					</button>
+					<button
+						className={styles.menuButton}
+						onClick={() => {
+							alert('Mostrar acompañamientos');
+						}}
+					>
+						<FaCocktail />
+						Adicionales
+					</button>
 				</div>
 			</section>
 		</div>

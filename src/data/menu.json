@@ -44,37 +44,39 @@
       "description": "Hamburguesa con tomate, lechuga, tocineta, ketchup y doble proteína de elección.",
       "price": 8500,
       "image": "/public/dobleburguer.png"
-    },
+    }
+    ],
+
+    "Accompaniments":[
     {
-      "id": 3,
+      "id": 1,
       "name": "Papas fritas",
       "description": "Deliciosas papas fritas naturales con salsa de ajo.",
       "price": 3500,
       "image": "/public/papasfritas.png"
     },
     {
-      "id": 4,
+      "id": 2,
       "name": "Aros de cebolla",
       "description": "Aros de cebolla naturales con salsa especial de la casa.",
       "price": 3500,
       "image": "/public/aros.png"
     },
     {
-      "id": 5,
+      "id": 3,
       "name": "Extra huevo",
       "description": "Huevo frito 1/und",
       "price": 1200,
       "image": "/public/huevo.png"
     },
     {
-      "id": 6,
+      "id": 4,
       "name": "Extra queso",
       "description": "Adicional de queso mozarella",
       "price": 1200,
       "image": "/public/queso.png"
     }
   ],
-  
   "Beverages": [
     {
       "id": 1,

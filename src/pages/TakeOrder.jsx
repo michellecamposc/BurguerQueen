@@ -1,5 +1,5 @@
 import { BillSection } from '../components/BillSection';
-import { ProductCard } from '../components/ProductCard';
+import { LunchCard, ProductCard } from '../components/ProductCard';
 import { NavBar, SelectTable, MenuOptions } from '../components/NavBar';
 import styles from '../styles/TakeOrder.module.css';
 import menu from '../data/menu.json';
@@ -19,6 +19,9 @@ export const TakeOrder = () => {
 							<ProductCard key={index} item={item} />
 						))}
 						{menu.Lunch.map((item, index) => (
+							<LunchCard key={index} item={item} />
+						))}
+						{menu.Accompaniments.map((item, index) => (
 							<ProductCard key={index} item={item} />
 						))}
 						{menu.Beverages.map((item, index) => (

@@ -22,13 +22,6 @@
 	margin-top: 2.5rem;
 	width: 100%;
 }
-/* 
-#welcomeTitle {
-	font-family: var(--font-family);
-	font-size: var(--font-size-title);
-	font-weight: 600;
-	margin-top: 0.5rem;
-} */
 
 #searchBar {
 	border-radius: 0.825rem;
@@ -85,13 +78,13 @@
 	border-radius: 10px;
 	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
 	height: 5.789rem;
-	width: 53rem;
+	width: 52.3rem;
 }
 
 .buttonsContainer {
 	display: flex;
 	justify-content: space-evenly;
-	padding: 1.5rem 6rem 0rem 0rem;
+	padding: 1.5rem 2rem 1.5rem 1.5rem;
 }
 
 .tableButton {
@@ -125,8 +118,7 @@
 }
 
 #productInformation {
-	padding: 0.8rem;
-	margin-bottom: 0.6rem;
+	padding: 0.8rem 0.8rem 0rem 0.8rem;
 }
 
 .productCard p {
@@ -144,6 +136,24 @@
 	display: flex;
 	justify-content: center;
 	margin-top: 1.5rem;
+}
+
+#proteinContainer {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0rem 0.8rem 1rem 0.8rem;
+	justify-content: space-between;
+}
+
+.proteinBtn {
+	height: 2rem;
+	width: 6rem;
+	background: linear-gradient(90deg, #ede574 0%, #e1f5c4 100%);
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 0.625rem;
+	font-family: var(--font-family);
+	font-weight: 500;
+	margin-top: 1rem;
 }
 
 /* Sección de cuenta */
