@@ -23,6 +23,7 @@
 
 h1 {
 	font-family: var(--font-family);
+	font-size: var(--font-size-title);
 }
 
 h2 {

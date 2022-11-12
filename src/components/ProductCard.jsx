@@ -1,19 +1,23 @@
 import styles from '../styles/TakeOrder.module.css';
+import { BsPlusCircleFill } from 'react-icons/bs';
 
-// Tarjeta de desayuno y para tomar
+// Tarjeta para desayuno, para tomar y agregrados
 export const ProductCard = ({ item }) => {
 	const { name, price, description, image } = item;
 	return (
-		<div className={styles.productCard}>
-			<div id={styles.productImage}>
+		<section className={styles.productCard}>
+			<div className={styles.imageAndButtonContainer}>
 				<img src={image} alt='menu' />
+				<section className={styles.addButton}>
+					<BsPlusCircleFill size={'2em'} color={'#4D4D4D'} />
+				</section>
 			</div>
-			<div id={styles.productInformation}>
+			<article id={styles.productInformation}>
 				<h1>{name}</h1>
 				<p>{description}</p>
 				<h3>${price + 'clp'}</h3>
-			</div>
-		</div>
+			</article>
+		</section>
 	);
 };
 
@@ -21,22 +25,25 @@ export const ProductCard = ({ item }) => {
 export const LunchCard = ({ item }) => {
 	const { name, price, description, image } = item;
 	return (
-		<div className={styles.productCard}>
-			<div id={styles.productImage}>
+		<section className={styles.productCard}>
+			<div className={styles.imageAndButtonContainer}>
 				<img src={image} alt='menu' />
+				<section className={styles.addButton}>
+					<BsPlusCircleFill size={'2em'} color={'#4D4D4D'} />
+				</section>
 			</div>
-			<div id={styles.productInformation}>
+			<article id={styles.productInformation}>
 				<h1>{name}</h1>
 				<p>{description}</p>
 				<h3>${price + 'clp'}</h3>
 				<h4>Selecciona la proteína</h4>
-			</div>
+			</article>
 			<div id={styles.proteinContainer}>
 				<button className={styles.proteinBtn}>Carne</button>
 				<button className={styles.proteinBtn}>Pollo</button>
 				<button className={styles.proteinBtn}>Vegetariana</button>
 			</div>
-		</div>
+		</section>
 	);
 };
 

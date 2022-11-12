@@ -1,4 +1,8 @@
-import { BillSection } from '../components/BillSection';
+import {
+	FirstBillSection,
+	SendOrderButton,
+	addedProducts,
+} from '../components/BillSection';
 import { LunchCard, ProductCard } from '../components/ProductCard';
 import { NavBar, SelectTable, MenuOptions } from '../components/NavBar';
 import styles from '../styles/TakeOrder.module.css';
@@ -30,7 +34,17 @@ export const TakeOrder = () => {
 					</div>
 				</section>
 				<section id={styles.billContainer}>
-					<BillSection />
+					<div id={styles.tableSectionContainer}>
+						<FirstBillSection />
+					</div>
+
+					<div id={styles.addedProducts}>
+						<addedProducts />
+					</div>
+
+					<div id={styles.totalContainer}>
+						<SendOrderButton />
+					</div>
 				</section>
 			</div>
 		</div>
