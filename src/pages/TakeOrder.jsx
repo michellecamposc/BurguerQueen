@@ -1,7 +1,7 @@
 import {
+	CartProducts,
 	FirstBillSection,
 	SendOrderButton,
-	addedProducts,
 } from '../components/BillSection';
 import { LunchCard, ProductCard } from '../components/ProductCard';
 import { NavBar, SelectTable, MenuOptions } from '../components/NavBar';
@@ -37,11 +37,9 @@ export const TakeOrder = () => {
 					<div id={styles.tableSectionContainer}>
 						<FirstBillSection />
 					</div>
-
 					<div id={styles.addedProducts}>
-						<addedProducts />
+						<CartProducts />
 					</div>
-
 					<div id={styles.totalContainer}>
 						<SendOrderButton />
 					</div>

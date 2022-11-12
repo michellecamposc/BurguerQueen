@@ -7,11 +7,14 @@ export const ProductCard = ({ item }) => {
 	return (
 		<section className={styles.productCard}>
 			<div className={styles.imageAndButtonContainer}>
-				<img src={image} alt='menu' />
+				<section className={styles.imageContainer}>
+					<img src={image} alt='menu' />
+				</section>
 				<section className={styles.addButton}>
 					<BsPlusCircleFill size={'2em'} color={'#4D4D4D'} />
 				</section>
 			</div>
+
 			<article id={styles.productInformation}>
 				<h1>{name}</h1>
 				<p>{description}</p>
@@ -27,7 +30,9 @@ export const LunchCard = ({ item }) => {
 	return (
 		<section className={styles.productCard}>
 			<div className={styles.imageAndButtonContainer}>
-				<img src={image} alt='menu' />
+				<section className={styles.imageContainer}>
+					<img src={image} alt='menu' />
+				</section>
 				<section className={styles.addButton}>
 					<BsPlusCircleFill size={'2em'} color={'#4D4D4D'} />
 				</section>

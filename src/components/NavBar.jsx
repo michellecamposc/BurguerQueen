@@ -8,7 +8,6 @@ import {
 	FaUtensils,
 	FaDollarSign,
 } from 'react-icons/fa';
-import { color } from '@mui/system';
 
 //  Componente de barra de navegación
 export const NavBar = () => {
