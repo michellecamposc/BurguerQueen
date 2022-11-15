@@ -1,9 +1,12 @@
 import styles from '../styles/TakeOrder.module.css';
 import { BsPlusCircleFill } from 'react-icons/bs';
+import { useState } from 'react';
 
 // Tarjeta para desayuno, para tomar y agregrados
-export const ProductCard = ({ item }) => {
+export const ProductCard = ({ item, setAddedProduct, addedProduct }) => {
 	const { name, price, description, image } = item;
+	const addItem = () => setAddedProduct([...addedProduct, { name, price }]);
+
 	return (
 		<section className={styles.productCard}>
 			<div className={styles.imageAndButtonContainer}>
@@ -11,10 +14,13 @@ export const ProductCard = ({ item }) => {
 					<img src={image} alt='menu' />
 				</section>
 				<section className={styles.addButton}>
-					<BsPlusCircleFill size={'2em'} color={'#4D4D4D'} />
+					<BsPlusCircleFill
+						size={'2em'}
+						color={'#4D4D4D'}
+						onClick={(event) => addItem()}
+					/>
 				</section>
 			</div>
-
 			<article id={styles.productInformation}>
 				<h1>{name}</h1>
 				<p>{description}</p>
@@ -25,8 +31,10 @@ export const ProductCard = ({ item }) => {
 };
 
 // Tarjeta de almuerzo
-export const LunchCard = ({ item }) => {
+export const LunchCard = ({ item, addedProduct, setAddedProduct }) => {
 	const { name, price, description, image } = item;
+	const addItem = () => setAddedProduct([...addedProduct, { name, price }]);
+
 	return (
 		<section className={styles.productCard}>
 			<div className={styles.imageAndButtonContainer}>
@@ -34,7 +42,11 @@ export const LunchCard = ({ item }) => {
 					<img src={image} alt='menu' />
 				</section>
 				<section className={styles.addButton}>
-					<BsPlusCircleFill size={'2em'} color={'#4D4D4D'} />
+					<BsPlusCircleFill
+						size={'2em'}
+						color={'#4D4D4D'}
+						onClick={(event) => addItem()}
+					/>
 				</section>
 			</div>
 			<article id={styles.productInformation}>
@@ -51,8 +63,3 @@ export const LunchCard = ({ item }) => {
 		</section>
 	);
 };
-
-// Renderizado de listas y props
-// metodo tofixed
-// renderizado condicional
-// use state

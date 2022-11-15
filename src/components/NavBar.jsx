@@ -8,6 +8,8 @@ import {
 	FaUtensils,
 	FaDollarSign,
 } from 'react-icons/fa';
+import menu from '../data/menu.json';
+import { useState } from 'react';
 
 //  Componente de barra de navegación
 export const NavBar = () => {
@@ -30,26 +32,40 @@ export const NavBar = () => {
 };
 
 //  Componente para seleccionar mesas
-export const SelectTable = () => {
+export const SelectTable = (props) => {
+	const { setSelectedTable } = props;
+	// const handleSelectedTable = (tableNumber) => setSelectedTable(tableNumber);
 	return (
 		<IconContext.Provider value={{ color: 'rgba(56, 56, 56, 1)' }}>
 			<div className={styles.tableSection}>
 				<h2>Selecciona la mesa</h2>
 				<section className={styles.optionContainer}>
 					<div className={styles.buttonsContainer}>
-						<button className={styles.tableButton}>
+						<button
+							className={styles.tableButton}
+							onClick={(event) => setSelectedTable('1')}
+						>
 							<FaUserAlt />
 							Mesa 1
 						</button>
-						<button className={styles.tableButton}>
+						<button
+							className={styles.tableButton}
+							onClick={(event) => setSelectedTable('2')}
+						>
 							<FaUserAlt />
 							Mesa 2
 						</button>
-						<button className={styles.tableButton}>
+						<button
+							className={styles.tableButton}
+							onClick={(event) => setSelectedTable('3')}
+						>
 							<FaUserAlt />
 							Mesa 3
 						</button>
-						<button className={styles.tableButton}>
+						<button
+							className={styles.tableButton}
+							onClick={(event) => setSelectedTable('4')}
+						>
 							<FaUserAlt />
 							Mesa 4
 						</button>

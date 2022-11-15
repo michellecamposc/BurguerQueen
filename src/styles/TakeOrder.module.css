@@ -191,7 +191,9 @@
 
 .tableInformation {
 	width: 21.313rem;
-	height: 4.521rem;
+	height: 3rem;
+	flex-direction: row;
+	display: flex;
 }
 
 .tableInformation h2 {
