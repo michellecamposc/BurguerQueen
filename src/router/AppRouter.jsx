@@ -3,7 +3,7 @@ import { HomePage } from '../pages/HomePage';
 import { TakeOrder } from '../pages/TakeOrder';
 import { KitchenPage } from '../pages/KitchenPage';
 
-//  Router
+//  Rutas del punto de venta
 export const AppRouter = () => {
 	return (
 		<>

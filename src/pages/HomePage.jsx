@@ -4,7 +4,7 @@ import styles from '../styles/HomePage.module.css';
 export const HomePage = () => {
 	return (
 		<div id={styles.homeContainer}>
-			<section id={styles.buttonsContainer}>
+			<section id={styles.buttonsHomeContainer}>
 				<img src='public/dejaBurgLogo.png' />
 				<Link to='order'>
 					<button id={styles.orderBtn}>Tomar pedido</button>

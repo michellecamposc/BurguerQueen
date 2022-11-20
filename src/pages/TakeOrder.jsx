@@ -10,12 +10,15 @@ import menu from '../data/menu.json';
 import { useState } from 'react';
 
 export const TakeOrder = () => {
-	// Estado para seleccionar la mesa
+	// State para seleccionar la mesa
 	const [selectedTable, setSelectedTable] = useState('');
-
-	//  Estado para añadir productos al carrito
+	// State para añadir productos al carrito
 	const [addedProduct, setAddedProduct] = useState([]);
-	// const [addedLunchProduct, setAddedLunchProduct] = useState([]);
+
+	// Función para eliminar productos del carrito
+	const deleteCartProduct = (item) => {
+		setAddedProduct(addedProduct.filter((product) => product.id !== item));
+	};
 
 	return (
 		<div id={styles.orderContainer}>
@@ -64,15 +67,26 @@ export const TakeOrder = () => {
 				</section>
 				<section id={styles.billContainer}>
 					<div id={styles.tableSectionContainer}>
-						<FirstBillSection selectedTable={selectedTable} />
+						<FirstBillSection
+							selectedTable={selectedTable}
+							addedProduct={addedProduct}
+						/>
 					</div>
 					<div id={styles.addedProducts}>
-						{addedProduct.map((item, index) => (
-							<CartProducts key={index} addedProduct={item} />
+						{addedProduct.map((item, product) => (
+							<CartProducts
+								key={product}
+								addedProduct={item}
+								setAddedProduct={setAddedProduct}
+								deleteCartProduct={deleteCartProduct}
+							/>
 						))}
 					</div>
 					<div id={styles.totalContainer}>
-						<SendOrderButton />
+						<SendOrderButton
+							setAddedProduct={setAddedProduct}
+							addedProduct={addedProduct}
+						/>
 					</div>
 				</section>
 			</div>

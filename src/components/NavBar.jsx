@@ -8,8 +8,7 @@ import {
 	FaUtensils,
 	FaDollarSign,
 } from 'react-icons/fa';
-import menu from '../data/menu.json';
-import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 //  Componente de barra de navegación
 export const NavBar = () => {
@@ -23,10 +22,12 @@ export const NavBar = () => {
 					placeholder='🔍   Qué estás buscando?'
 				/>
 			</section>
-			<button id={styles.btnClose}>
-				<FaSignOutAlt color='rgba(43, 43, 43, 1)' />
-				Salir
-			</button>
+			<Link to='/'>
+				<button id={styles.btnClose}>
+					<FaSignOutAlt color='rgba(43, 43, 43, 1)' />
+					Salir
+				</button>
+			</Link>
 		</section>
 	);
 };
@@ -34,7 +35,6 @@ export const NavBar = () => {
 //  Componente para seleccionar mesas
 export const SelectTable = (props) => {
 	const { setSelectedTable } = props;
-	// const handleSelectedTable = (tableNumber) => setSelectedTable(tableNumber);
 	return (
 		<IconContext.Provider value={{ color: 'rgba(56, 56, 56, 1)' }}>
 			<div className={styles.tableSection}>
@@ -77,26 +77,16 @@ export const SelectTable = (props) => {
 };
 
 //  Componente con las opciones de menú
-export const MenuOptions = () => {
+export const MenuOptions = (breakfast, setBreakfast, lunch, setLunch) => {
 	return (
 		<div className={styles.tableSection}>
 			<h2>Menú</h2>
 			<section className={styles.optionContainer}>
 				<div className={styles.buttonsContainer}>
-					<button
-						className={styles.menuButton}
-						onClick={() => {
-							alert('Mostrar productos del desayuno');
-						}}
-					>
+					<button className={styles.menuButton}>
 						<FaCoffee /> Desayuno
 					</button>
-					<button
-						className={styles.menuButton}
-						onClick={() => {
-							alert('Mostrar productos del almuerzo');
-						}}
-					>
+					<button className={styles.menuButton}>
 						<FaUtensils /> Almuerzo/Cena
 					</button>
 					<button

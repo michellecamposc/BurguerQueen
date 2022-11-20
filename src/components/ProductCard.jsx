@@ -1,6 +1,5 @@
 import styles from '../styles/TakeOrder.module.css';
 import { BsPlusCircleFill } from 'react-icons/bs';
-import { useState } from 'react';
 
 // Tarjeta para desayuno, para tomar y agregrados
 export const ProductCard = ({ item, setAddedProduct, addedProduct }) => {
@@ -11,7 +10,7 @@ export const ProductCard = ({ item, setAddedProduct, addedProduct }) => {
 		<section className={styles.productCard}>
 			<div className={styles.imageAndButtonContainer}>
 				<section className={styles.imageContainer}>
-					<img src={image} alt='menu' />
+					<img src={image} alt={'menu'} />
 				</section>
 				<section className={styles.addButton}>
 					<BsPlusCircleFill
@@ -34,7 +33,6 @@ export const ProductCard = ({ item, setAddedProduct, addedProduct }) => {
 export const LunchCard = ({ item, addedProduct, setAddedProduct }) => {
 	const { name, price, description, image } = item;
 	const addItem = () => setAddedProduct([...addedProduct, { name, price }]);
-
 	return (
 		<section className={styles.productCard}>
 			<div className={styles.imageAndButtonContainer}>

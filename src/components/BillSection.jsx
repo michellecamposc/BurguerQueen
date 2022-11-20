@@ -21,18 +21,23 @@ export const FirstBillSection = (props) => {
 };
 
 // Componente de productos añadidos
-export const CartProducts = ({ addedProduct }) => {
+export const CartProducts = ({ addedProduct, deleteCartProduct }) => {
 	const { name, price } = addedProduct;
+
 	return (
 		<IconContext.Provider value={{ color: 'rgba(255, 255, 255, 1)' }}>
 			<section className={styles.currentOrderContainer}>
 				<section id={styles.productsDescription}>
 					<h3>{name}</h3>
-					<p>{price}</p>
+					<p>${price} clp</p>
+					<p>{} </p>
 				</section>
 				<section className={styles.firstBtnContainer}>
 					<section className={styles.btnsContainer}>
-						<button className={styles.addAndDeleteButton}>
+						<button
+							className={styles.addAndDeleteButton}
+							onClick={() => deleteCartProduct(addedProduct.id)}
+						>
 							<FaMinus />
 						</button>
 						<h2>{1}</h2>
@@ -47,14 +52,23 @@ export const CartProducts = ({ addedProduct }) => {
 };
 
 // Componente de boton de enviar orden
-export const SendOrderButton = () => {
+export const SendOrderButton = ({ setAddedProduct, addedProduct }) => {
+	const { price } = addedProduct;
+
+	// Calcular el total del carrito
+	const totalPrice = () => {
+		const reducer = (totalAcc, addedProduct) => totalAcc + addedProduct.price;
+		const sum = addedProduct.reduce(reducer, 0);
+		return sum;
+	};
+
 	return (
 		<>
 			<article className={styles.priceContainer}>
 				<section className={styles.informationContainer}>
 					<h3>Total</h3>
 					<div id={styles.price}>
-						<h3>3400clp</h3>
+						<h3>${totalPrice()}</h3>
 					</div>
 				</section>
 			</article>
