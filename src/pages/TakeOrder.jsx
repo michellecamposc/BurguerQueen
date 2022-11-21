@@ -1,5 +1,5 @@
 import {
-	CartProducts,
+	ProductCarts,
 	FirstBillSection,
 	SendOrderButton,
 } from '../components/BillSection';
@@ -7,19 +7,11 @@ import { LunchCard, ProductCard } from '../components/ProductCard';
 import { NavBar, SelectTable, MenuOptions } from '../components/NavBar';
 import styles from '../styles/TakeOrder.module.css';
 import menu from '../data/menu.json';
-import { useState } from 'react';
+import { MyContext } from '../context/MyContext';
+import { useContext } from 'react';
 
 export const TakeOrder = () => {
-	// State para seleccionar la mesa
-	const [selectedTable, setSelectedTable] = useState('');
-	// State para añadir productos al carrito
-	const [addedProduct, setAddedProduct] = useState([]);
-
-	// Función para eliminar productos del carrito
-	const deleteCartProduct = (item) => {
-		setAddedProduct(addedProduct.filter((product) => product.id !== item));
-	};
-
+	const { addedProduct } = useContext(MyContext);
 	return (
 		<div id={styles.orderContainer}>
 			<div id={styles.navContainer}>
@@ -27,66 +19,34 @@ export const TakeOrder = () => {
 			</div>
 			<div id={styles.menuContainer}>
 				<section id={styles.productsContainer}>
-					<SelectTable setSelectedTable={setSelectedTable} />
+					<SelectTable />
 					<MenuOptions />
-
 					<div id={styles.justCardProducts}>
 						{menu.Breakfast.map((item, index) => (
-							<ProductCard
-								key={index}
-								item={item}
-								setAddedProduct={setAddedProduct}
-								addedProduct={addedProduct}
-							/>
+							<ProductCard key={index} item={item} />
 						))}
 						{menu.Lunch.map((item, index) => (
-							<LunchCard
-								key={index}
-								item={item}
-								setAddedProduct={setAddedProduct}
-								addedProduct={addedProduct}
-							/>
+							<LunchCard key={index} item={item} />
 						))}
 						{menu.Accompaniments.map((item, index) => (
-							<ProductCard
-								key={index}
-								item={item}
-								setAddedProduct={setAddedProduct}
-								addedProduct={addedProduct}
-							/>
+							<ProductCard key={index} item={item} />
 						))}
 						{menu.Beverages.map((item, index) => (
-							<ProductCard
-								key={index}
-								item={item}
-								setAddedProduct={setAddedProduct}
-								addedProduct={addedProduct}
-							/>
+							<ProductCard key={index} item={item} />
 						))}
 					</div>
 				</section>
 				<section id={styles.billContainer}>
 					<div id={styles.tableSectionContainer}>
-						<FirstBillSection
-							selectedTable={selectedTable}
-							addedProduct={addedProduct}
-						/>
+						<FirstBillSection />
 					</div>
 					<div id={styles.addedProducts}>
 						{addedProduct.map((item, product) => (
-							<CartProducts
-								key={product}
-								addedProduct={item}
-								setAddedProduct={setAddedProduct}
-								deleteCartProduct={deleteCartProduct}
-							/>
+							<ProductCarts key={product} addedProduct={item} />
 						))}
 					</div>
 					<div id={styles.totalContainer}>
-						<SendOrderButton
-							setAddedProduct={setAddedProduct}
-							addedProduct={addedProduct}
-						/>
+						<SendOrderButton />
 					</div>
 				</section>
 			</div>

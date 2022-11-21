@@ -1,9 +1,14 @@
 import styles from '../styles/TakeOrder.module.css';
 import { BsPlusCircleFill } from 'react-icons/bs';
+import { useContext } from 'react';
+import { MyContext } from '../context/MyContext';
 
 // Tarjeta para desayuno, para tomar y agregrados
-export const ProductCard = ({ item, setAddedProduct, addedProduct }) => {
+export const ProductCard = ({ item }) => {
 	const { name, price, description, image } = item;
+	const { addedProduct, setAddedProduct } = useContext(MyContext);
+
+	// Función para añadir productos al carrito
 	const addItem = () => setAddedProduct([...addedProduct, { name, price }]);
 
 	return (
@@ -30,9 +35,11 @@ export const ProductCard = ({ item, setAddedProduct, addedProduct }) => {
 };
 
 // Tarjeta de almuerzo
-export const LunchCard = ({ item, addedProduct, setAddedProduct }) => {
+export const LunchCard = ({ item }) => {
 	const { name, price, description, image } = item;
+	const { addedProduct, setAddedProduct } = useContext(MyContext);
 	const addItem = () => setAddedProduct([...addedProduct, { name, price }]);
+
 	return (
 		<section className={styles.productCard}>
 			<div className={styles.imageAndButtonContainer}>

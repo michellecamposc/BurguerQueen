@@ -9,6 +9,8 @@ import {
 	FaDollarSign,
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { MyContext } from '../context/MyContext';
 
 //  Componente de barra de navegación
 export const NavBar = () => {
@@ -33,8 +35,8 @@ export const NavBar = () => {
 };
 
 //  Componente para seleccionar mesas
-export const SelectTable = (props) => {
-	const { setSelectedTable } = props;
+export const SelectTable = () => {
+	const { setSelectedTable } = useContext(MyContext);
 	return (
 		<IconContext.Provider value={{ color: 'rgba(56, 56, 56, 1)' }}>
 			<div className={styles.tableSection}>
@@ -77,7 +79,7 @@ export const SelectTable = (props) => {
 };
 
 //  Componente con las opciones de menú
-export const MenuOptions = (breakfast, setBreakfast, lunch, setLunch) => {
+export const MenuOptions = () => {
 	return (
 		<div className={styles.tableSection}>
 			<h2>Menú</h2>

@@ -2,10 +2,12 @@ import styles from '../styles/TakeOrder.module.css';
 import { FaMinus } from 'react-icons/fa';
 import { BsPlusLg } from 'react-icons/bs';
 import { IconContext } from 'react-icons/lib';
+import { useContext } from 'react';
+import { MyContext } from '../context/MyContext';
 
 // Componente para seleccionar la mesa actual
-export const FirstBillSection = (props) => {
-	const { selectedTable } = props;
+export const FirstBillSection = ({ item }) => {
+	const { clearAllProducts, selectedTable } = useContext(MyContext);
 	return (
 		<>
 			<article className={styles.tableInformation}>
@@ -14,33 +16,30 @@ export const FirstBillSection = (props) => {
 			</article>
 			<section className={styles.currentOrder}>
 				<h1>Orden actual</h1>
-				<button id={styles.clearButton}>Limpiar</button>
+				<button id={styles.clearButton} onClick={() => clearAllProducts(item)}>
+					Limpiar
+				</button>
 			</section>
 		</>
 	);
 };
 
 // Componente de productos añadidos
-export const CartProducts = ({ addedProduct, deleteCartProduct }) => {
+export const ProductCarts = ({ addedProduct }) => {
 	const { name, price } = addedProduct;
-
 	return (
 		<IconContext.Provider value={{ color: 'rgba(255, 255, 255, 1)' }}>
 			<section className={styles.currentOrderContainer}>
 				<section id={styles.productsDescription}>
 					<h3>{name}</h3>
 					<p>${price} clp</p>
-					<p>{} </p>
 				</section>
 				<section className={styles.firstBtnContainer}>
 					<section className={styles.btnsContainer}>
-						<button
-							className={styles.addAndDeleteButton}
-							onClick={() => deleteCartProduct(addedProduct.id)}
-						>
+						<button className={styles.addAndDeleteButton}>
 							<FaMinus />
 						</button>
-						<h2>{1}</h2>
+						<h2>{1} </h2>
 						<button className={styles.addAndDeleteButton}>
 							<BsPlusLg />
 						</button>
@@ -52,15 +51,8 @@ export const CartProducts = ({ addedProduct, deleteCartProduct }) => {
 };
 
 // Componente de boton de enviar orden
-export const SendOrderButton = ({ setAddedProduct, addedProduct }) => {
-	const { price } = addedProduct;
-
-	// Calcular el total del carrito
-	const totalPrice = () => {
-		const reducer = (totalAcc, addedProduct) => totalAcc + addedProduct.price;
-		const sum = addedProduct.reduce(reducer, 0);
-		return sum;
-	};
+export const SendOrderButton = () => {
+	const { totalPrice } = useContext(MyContext);
 
 	return (
 		<>
