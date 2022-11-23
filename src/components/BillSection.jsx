@@ -27,6 +27,8 @@ export const FirstBillSection = ({ item }) => {
 // Componente de productos añadidos
 export const ProductCarts = ({ addedProduct }) => {
 	const { name, price } = addedProduct;
+	const { handleAdd } = useContext(MyContext);
+	// const addItem = () => setAddedProduct([...addedProduct, { name, price }]);
 	return (
 		<IconContext.Provider value={{ color: 'rgba(255, 255, 255, 1)' }}>
 			<section className={styles.currentOrderContainer}>
@@ -39,9 +41,9 @@ export const ProductCarts = ({ addedProduct }) => {
 						<button className={styles.addAndDeleteButton}>
 							<FaMinus />
 						</button>
-						<h2>{1} </h2>
+						<p>1</p>
 						<button className={styles.addAndDeleteButton}>
-							<BsPlusLg />
+							<BsPlusLg onClick={() => handleAdd(addedProduct)} />
 						</button>
 					</section>
 				</section>

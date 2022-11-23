@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-
+import menu from '../data/menu.json';
 // Este almacena los datos
 export const MyContext = createContext();
 
@@ -11,10 +11,12 @@ export const MyContextProvider = ({ children }) => {
 	// State para añadir productos al carrito
 	const [addedProduct, setAddedProduct] = useState([]);
 
-	// Función para limpiar el carrito
+	// Función para borras todos los productos del carrito
 	const clearAllProducts = (item) => {
 		setAddedProduct(addedProduct.filter((product) => product.id !== item));
 	};
+
+	// Función para agregar más productos desde la orden
 
 	// Calcular el total del carrito
 	const totalPrice = () => {

@@ -14,7 +14,7 @@ export const TakeOrder = () => {
 	const { addedProduct } = useContext(MyContext);
 	return (
 		<div id={styles.orderContainer}>
-			<div id={styles.navContainer}>
+			<div>
 				<NavBar />
 			</div>
 			<div id={styles.menuContainer}>
@@ -41,8 +41,12 @@ export const TakeOrder = () => {
 						<FirstBillSection />
 					</div>
 					<div id={styles.addedProducts}>
-						{addedProduct.map((item, product) => (
-							<ProductCarts key={product} addedProduct={item} />
+						{addedProduct.map((item, product, { quantity }) => (
+							<ProductCarts
+								key={product}
+								addedProduct={item}
+								quantity={quantity}
+							/>
 						))}
 					</div>
 					<div id={styles.totalContainer}>

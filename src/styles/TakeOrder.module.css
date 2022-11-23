@@ -28,6 +28,7 @@
 	border: 2px solid rgba(217, 217, 217, 0.76);
 	height: 3.11rem;
 	width: 21.745rem;
+	padding: 1.5rem;
 }
 
 #searchBar::placeholder {
@@ -64,7 +65,6 @@
 #justCardProducts {
 	display: flex;
 	flex-flow: row wrap;
-	/*	padding: 1.5rem;*/
 }
 
 /* Seleccionar mesa style */
@@ -268,6 +268,13 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+}
+
+#inputNumber {
+	background-color: rgba(35, 35, 35, 1);
+	border: none;
+	height: 2rem;
+	width: 1.875rem;
 }
 
 .addAndDeleteButton {
