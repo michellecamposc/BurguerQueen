@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react';
-import menu from '../data/menu.json';
-// Este almacena los datos
+
+// Almacena los datos
 export const MyContext = createContext();
 
 // Este es el componente que engloba al resto de componentes
@@ -16,11 +16,21 @@ export const MyContextProvider = ({ children }) => {
 		setAddedProduct(addedProduct.filter((product) => product.id !== item));
 	};
 
-	// Función para agregar más productos desde la orden
+	// Contador para agregar más productos desde la orden
+	const [counter, setCounter] = useState(1);
+	const handleAdd = () => {
+		setCounter(counter + 1);
+	};
+
+	// Contador para agregar más productos desde la orden
+	const handleRemove = () => {
+		setCounter(counter - 1);
+	};
 
 	// Calcular el total del carrito
 	const totalPrice = () => {
-		const reducer = (totalAcc, addedProduct) => totalAcc + addedProduct.price;
+		const reducer = (totalAcc, addedProduct) =>
+			totalAcc + addedProduct.price * counter;
 		const sum = addedProduct.reduce(reducer, 0);
 		return sum;
 	};
@@ -32,6 +42,9 @@ export const MyContextProvider = ({ children }) => {
 		setAddedProduct,
 		clearAllProducts,
 		totalPrice,
+		handleAdd,
+		counter,
+		handleRemove,
 	};
 
 	return <MyContext.Provider value={props}>{children}</MyContext.Provider>;

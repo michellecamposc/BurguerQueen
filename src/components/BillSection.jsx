@@ -4,6 +4,7 @@ import { BsPlusLg } from 'react-icons/bs';
 import { IconContext } from 'react-icons/lib';
 import { useContext } from 'react';
 import { MyContext } from '../context/MyContext';
+import { createOrder } from '../firebase/firebaseConfig';
 
 // Componente para seleccionar la mesa actual
 export const FirstBillSection = ({ item }) => {
@@ -25,25 +26,25 @@ export const FirstBillSection = ({ item }) => {
 };
 
 // Componente de productos añadidos
-export const ProductCarts = ({ addedProduct }) => {
+export const ProductCards = ({ addedProduct, item }) => {
 	const { name, price } = addedProduct;
-	const { handleAdd } = useContext(MyContext);
-	// const addItem = () => setAddedProduct([...addedProduct, { name, price }]);
+	const { handleAdd, counter, handleRemove } = useContext(MyContext);
+
 	return (
 		<IconContext.Provider value={{ color: 'rgba(255, 255, 255, 1)' }}>
 			<section className={styles.currentOrderContainer}>
 				<section id={styles.productsDescription}>
 					<h3>{name}</h3>
-					<p>${price} clp</p>
+					<p>${price * counter} clp</p>
 				</section>
 				<section className={styles.firstBtnContainer}>
 					<section className={styles.btnsContainer}>
 						<button className={styles.addAndDeleteButton}>
-							<FaMinus />
+							<FaMinus onClick={() => handleRemove(item)} />
 						</button>
-						<p>1</p>
+						<h3>{counter}</h3>
 						<button className={styles.addAndDeleteButton}>
-							<BsPlusLg onClick={() => handleAdd(addedProduct)} />
+							<BsPlusLg onClick={() => handleAdd(item)} />
 						</button>
 					</section>
 				</section>
@@ -66,7 +67,9 @@ export const SendOrderButton = () => {
 					</div>
 				</section>
 			</article>
-			<button className={styles.sendOrderButton}>Enviar Orden</button>
+			<button className={styles.sendOrderButton} onClick={() => createOrder()}>
+				Enviar Orden
+			</button>
 		</>
 	);
 };

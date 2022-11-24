@@ -64,7 +64,10 @@
 
 #justCardProducts {
 	display: flex;
+	height: 40rem;
 	flex-flow: row wrap;
+	overflow-y: scroll;
+	margin-top: 2.5rem;
 }
 
 /* Seleccionar mesa style */

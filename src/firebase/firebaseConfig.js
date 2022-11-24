@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, setDoc, addDoc } from "firebase/firestore";
+import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,29 +18,20 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
 
-// Función para agregar pedidos a firebase
-const createOrder = async (posting) => {
-  const docRef = await addDoc(collection(db, "Post"), {
-    description: posting,
-    uid: auth.currentUser.uid,
-    name: auth.currentUser.displayName,
+// Función para agregar los pedidos a firebase
+const createOrder = async (tableNumber, items, id) => {
+  const saveOrder = await setDoc(doc(db, "commands"), {
+    orderId: id,
+    table: tableNumber,
+    product: items,
   });
-  document.getElementById("inputPost").value = "";
-  console.log("Document written with ID: ", docRef.id);
-};
+  console.log("Visualizando la data", saveOrder);
+}
+
+export { createOrder }
 
 
-export const createOrder = async (customerName, totalPrice, tableNumber, cartItems) => {
-  try {
-    const docRef = await addDoc(collection(db, "order"), {
-      items: cartItems,
-      totalPrice: totalPrice,
-      customer: customerName,
-      tableNumber: tableNumber,
-    });
-    return docRef
-    // console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
-};
+
+
+
+

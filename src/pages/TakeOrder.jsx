@@ -1,5 +1,5 @@
 import {
-	ProductCarts,
+	ProductCards,
 	FirstBillSection,
 	SendOrderButton,
 } from '../components/BillSection';
@@ -41,12 +41,8 @@ export const TakeOrder = () => {
 						<FirstBillSection />
 					</div>
 					<div id={styles.addedProducts}>
-						{addedProduct.map((item, product, { quantity }) => (
-							<ProductCarts
-								key={product}
-								addedProduct={item}
-								quantity={quantity}
-							/>
+						{addedProduct.map((item, product) => (
+							<ProductCards key={product} addedProduct={item} />
 						))}
 					</div>
 					<div id={styles.totalContainer}>

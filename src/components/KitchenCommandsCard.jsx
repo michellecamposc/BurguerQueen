@@ -15,20 +15,7 @@ export const CommandsCard = () => {
 				<h3>Producto</h3>
 				<h3>Cantidad</h3>
 			</section>
-			<section id={styles.orderContainer}>
-				<article id={styles.productContainer}>
-					<h3>Arroz</h3>
-					<h3>Arroz</h3>
-					<h3>Arroz</h3>
-					<h3>Arroz</h3>
-				</article>
-				<article id={styles.amountContainer}>
-					<h3>1</h3>
-					<h3>2</h3>
-					<h3>1</h3>
-					<h3>3</h3>
-				</article>
-			</section>
+			<section id={styles.orderContainer}></section>
 			<section id={styles.readyBtnContainer}>
 				<button id={styles.readyBtn}>Pedido listo </button>
 			</section>
@@ -36,4 +23,20 @@ export const CommandsCard = () => {
 	);
 };
 
-// Componente que guarda los items enviados
+// Componente que muestra cada plato a cocinar
+export const ItemsContainer = () => {
+	<section id={styles.orderContainer}>
+		<article id={styles.productContainer}>
+			<h3>Arroz</h3>
+			<h3>Arroz</h3>
+			<h3>Arroz</h3>
+			<h3>Arroz</h3>
+		</article>
+		<article id={styles.amountContainer}>
+			<h3>1</h3>
+			<h3>2</h3>
+			<h3>1</h3>
+			<h3>3</h3>
+		</article>
+	</section>;
+};
