@@ -52,18 +52,6 @@ que un pedido está listo para servirlo a un cliente.
 
 ---
 
-#### [Historia de usuario 3] Meserx debe ver pedidos listos para servir
-
-Yo como meserx quiero ver los pedidos que están preparados para entregarlos
-rápidamente a los clientes que las hicieron.
-
-##### Criterios de aceptación
-
-- Ver listado de pedido listos para servir.
-- Marcar pedidos que han sido entregados.
-
----
-
 ## 4. Prototipo de alta fidelidad
 
 <img src= './public/home.png' >
