@@ -2,21 +2,15 @@
 
 ## 1. Resumen del proyecto
 
-Un pequeño restaurante de hamburguesas, que está creciendo, necesita una
-interfaz en la que puedan tomar pedidos usando una _tablet_, y enviarlos
-a la cocina para que se preparen ordenada y eficientemente.
+Un pequeño restaurante de hamburguesas, que está creciendo, necesita una interfaz en la que puedan tomar pedidos usando una _tablet_, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
 
 La interfaz debe mostrar el menú existente en la carta con sus respectivos productos. El mesero debe poder ir eligiendo qué _productos_ agregar y la interfaz debe ir mostrando el _resumen del pedido_ con el
 costo total.
 
----
-
 ## 2. Objetivo del proyecto
 
 El objetivo principal de este proyecto es aprender a construir una _interfaz web_
-implementando como librería de JavaScript React el cual nos permite mantener la interfaz y el estado sincronizados.
-
----
+implementando como librería de JavaScript React el cual nos permite mantener la interfaz y el estado sincronizados. Debe ser una aplicación SPA y diseñada para una tablet.
 
 ## 3. Historias de usuario
 
@@ -49,8 +43,6 @@ que un pedido está listo para servirlo a un cliente.
 - Marcar los pedidos que se han preparado y están listos para servirse.
 - Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se
   marcó como completado.
-
----
 
 ## 4. Prototipo de alta fidelidad
 
