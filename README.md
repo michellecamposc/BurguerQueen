@@ -54,7 +54,7 @@ que un pedido está listo para servirlo a un cliente.
 
 ## 4. Prototipo de alta fidelidad
 
-<img src= './public/home.png' >
+<img src= './public/Home.png' >
 
 <img src= './public/pos.png' >
 
