@@ -11,6 +11,7 @@ import {
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { MyContext } from '../context/MyContext';
+import db from '../data/menu.json';
 
 //  Componente de barra de navegación
 export const NavBar = () => {
@@ -81,32 +82,26 @@ export const SelectTable = () => {
 //  Componente con las opciones de menú
 export const MenuOptions = () => {
 	const { setSelectedCategory } = useContext(MyContext);
+  const lng = 'es';
 
 	return (
 		<div className={styles.tableSection}>
 			<h2>Menú</h2>
 			<section className={styles.optionContainer}>
 				<div className={styles.buttonsContainer}>
-					<button className={styles.menuButton} onClick={() => setSelectedCategory('Breakfast') }>
-						<FaCoffee /> Desayuno
-					</button>
-					<button className={styles.menuButton} onClick={() => setSelectedCategory('Lunch') }>
-						<FaUtensils /> Almuerzo/Cena
-					</button>
-					<button
-						className={styles.menuButton}
-						onClick={() => setSelectedCategory('Beverages') }
-					>
-						<FaCocktail />
-						Para tomar
-					</button>
-					<button
-						className={styles.menuButton}
-						onClick={() => setSelectedCategory('Accompaniments') }
-					>
-						<FaDollarSign />
-						Agregados
-					</button>
+          {db.categories.map(cat => (
+            <button className={styles.menuButton} onClick={() => setSelectedCategory(cat)} key={cat.id}>
+              { // Product icon
+                cat.code === 'BREAKFAST' ? <FaCoffee />
+                  : cat.code === 'LUNCH' ? <FaUtensils />
+                    : cat.code === 'ACCOMPANIMENTS' ? <FaCocktail />
+                      : cat.code === 'BEVERAGES' ? <FaDollarSign />
+                        : <FaDollarSign />
+              } { // Product name
+                cat.name[lng]
+              }
+            </button>
+          ))}
 				</div>
 			</section>
 		</div>
