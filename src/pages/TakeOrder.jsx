@@ -21,7 +21,7 @@ export const TakeOrder = () => {
 					<SelectTable />
 					<MenuOptions />
 					<div id={styles.justCardProducts}>
-						{menu.products?.filter(p => p.category === selectedCategory)?.map((item, index) => (
+						{menu.products?.filter(p => p.categoryId === selectedCategory.id)?.map((item, index) => (
 							<ProductCard key={index} item={item} />
 						))}
 					</div>

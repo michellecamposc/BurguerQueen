@@ -6,7 +6,7 @@
       "description": "Café doble de carácter con notas de dulce caramelo y matices de verde silvestre.",
       "price": 3200,
       "image": "/public/cafenegro.png",
-      "category": "Breakfast"
+      "categoryId": 1
 
     },
     {
@@ -15,7 +15,7 @@
       "description": "Es un Café de carácter con sabor a avellanada con leche a elección del cliente.",
       "price": 3200,
       "image":"/public/cafeconleche.png",
-      "category": "Breakfast"
+      "categoryId": 1
     },
     {
       "id": 3,
@@ -23,7 +23,7 @@
       "description": "Delicioso sandwich de jamón y queso mozarella en pan de masa madre.",
       "price": 5200,
       "image": "/public/sandwichJ&Q.png",
-      "category": "Breakfast"
+      "categoryId": 1
     },
     {
       "id": 4,
@@ -31,7 +31,7 @@
       "description": "Variedad de frutas naturales y orgánicas según la temporada.",
       "price": 2500,
       "image": "/public/jugofrutas.png",
-      "category": "Breakfast"
+      "categoryId": 1
     },
     {
       "id": 5,
@@ -39,7 +39,7 @@
       "description": "Hamburguesa con tomate, lechuga, cebolla, salsa de tomate y proteína elección",
       "price": 6000,
       "image": "/public/dobleburguer.png",
-      "category": "Lunch"
+      "categoryId": 2
     },
     {
       "id": 6,
@@ -47,7 +47,7 @@
       "description": "Hamburguesa con tomate, lechuga, tocineta, ketchup y doble proteína de elección.",
       "price": 8500,
       "image": "/public/simpleburguer.png",
-      "category": "Lunch"
+      "categoryId": 2
     },
     {
       "id": 7,
@@ -55,7 +55,7 @@
       "description": "Deliciosa hamburguesa con queso mozarella, tomate y salsa pesto de la casa",
       "price": 7500,
       "image": "/public/simpleburguer.png",
-      "category": "Lunch"
+      "categoryId": 2
     },
     {
       "id": 8,
@@ -63,7 +63,7 @@
       "description": "Deliciosas papas fritas naturales con salsa de ajo.",
       "price": 3500,
       "image": "/public/papasfritas.png",
-      "category": "Accompaniments"
+      "categoryId": 3
     },
     {
       "id": 9,
@@ -71,7 +71,7 @@
       "description": "Aros de cebolla naturales con salsa especial de la casa.",
       "price": 3500,
       "image": "/public/aros.png",
-      "category": "Accompaniments"
+      "categoryId": 3
     },
     {
       "id": 10,
@@ -79,7 +79,7 @@
       "description": "Huevo frito 1/und",
       "price": 1200,
       "image": "/public/huevo.png",
-      "category": "Accompaniments"
+      "categoryId": 3
     },
     {
       "id": 11,
@@ -87,7 +87,7 @@
       "description": "Adicional de queso mozarella",
       "price": 1200,
       "image": "/public/queso.png",
-      "category": "Accompaniments"
+      "categoryId": 3
     },
     {
       "id": 12,
@@ -95,7 +95,7 @@
       "description": "Agua mineral sin gas 500ml",
       "price": 1000,
       "image": "/public/agua.png",
-      "category": "Beverages"
+      "categoryId": 4
     },
     {
       "id": 13,
@@ -103,7 +103,7 @@
       "description": "Agua mineral sin gas 750ml",
       "price": 1500,
       "image": "/public/agua.png",
-      "category": "Beverages"
+      "categoryId": 4
     },
     {
       "id": 14,
@@ -111,7 +111,7 @@
       "description": "Gaseosa diferentes sabores",
       "price": 2000,
       "image": "/public/gaseosa.png",
-      "category": "Beverages"
+      "categoryId": 4
     },
     {
       "id": 15,
@@ -119,7 +119,29 @@
       "description": "Gaseosa diferentes sabores",
       "price": 3200,
       "image": "/public/gaseosa.png",
-      "category": "Beverages"
+      "categoryId": 4
     }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "code": "BREAKFAST",
+      "name": { "es": "Desayuno", "en": "Breakfast" }
+    },
+    {
+      "id": 2,
+      "code": "LUNCH",
+      "name": { "es": "Almuerzo/Cena", "en": "Lunch" }
+    },
+    {
+      "id": 3,
+      "code": "ACCOMPANIMENTS",
+      "name": { "es": "Para tomar", "en": "Accompaniments" }
+    },
+    {
+      "id": 4,
+      "code": "BEVERAGES",
+      "name": { "es": "Acompañamientos", "en": "Beverages" }
+    }    
   ]
 }
