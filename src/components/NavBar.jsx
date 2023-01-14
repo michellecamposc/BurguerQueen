@@ -80,31 +80,29 @@ export const SelectTable = () => {
 
 //  Componente con las opciones de menú
 export const MenuOptions = () => {
+	const { setSelectedCategory } = useContext(MyContext);
+
 	return (
 		<div className={styles.tableSection}>
 			<h2>Menú</h2>
 			<section className={styles.optionContainer}>
 				<div className={styles.buttonsContainer}>
-					<button className={styles.menuButton}>
+					<button className={styles.menuButton} onClick={() => setSelectedCategory('Breakfast') }>
 						<FaCoffee /> Desayuno
 					</button>
-					<button className={styles.menuButton}>
+					<button className={styles.menuButton} onClick={() => setSelectedCategory('Lunch') }>
 						<FaUtensils /> Almuerzo/Cena
 					</button>
 					<button
 						className={styles.menuButton}
-						onClick={() => {
-							alert('Mostrar bebidas');
-						}}
+						onClick={() => setSelectedCategory('Beverages') }
 					>
 						<FaCocktail />
 						Para tomar
 					</button>
 					<button
 						className={styles.menuButton}
-						onClick={() => {
-							alert('Mostrar acompañamientos');
-						}}
+						onClick={() => setSelectedCategory('Accompaniments') }
 					>
 						<FaDollarSign />
 						Agregados
