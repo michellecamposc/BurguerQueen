@@ -8,6 +8,9 @@ export const MyContextProvider = ({ children }) => {
 	// State para seleccionar la mesa
 	const [selectedTable, setSelectedTable] = useState('');
 
+  // State to store selected category
+  const [selectedCategory, setSelectedCategory] = useState('');
+
 	// State para añadir productos al carrito
 	const [addedProduct, setAddedProduct] = useState([]);
 
@@ -45,6 +48,8 @@ export const MyContextProvider = ({ children }) => {
 		handleAdd,
 		counter,
 		handleRemove,
+    selectedCategory,
+    setSelectedCategory
 	};
 
 	return <MyContext.Provider value={props}>{children}</MyContext.Provider>;
