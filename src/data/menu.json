@@ -35,6 +35,22 @@
     },
     {
       "id": 5,
+      "name": "Café Irlandes",
+      "description": "Es un Café de carácter con sabor a avellanada con leche a elección del cliente.",
+      "price": 3000,
+      "image": "/public/cafeIrlandes.png",
+      "categoryId": 1
+    },
+    {
+      "id": 6,
+      "name": "Chocolate caliente",
+      "description": "Cacao en polvo con leche descremada y un toque de canela en polvo.",
+      "price": 2500,
+      "image": "/public/chocolate.png",
+      "categoryId": 1
+    },
+    {
+      "id": 7,
       "name": "Hamburguesa simple",
       "description": "Hamburguesa con tomate, lechuga, cebolla, salsa de tomate y proteína elección",
       "price": 6000,
@@ -42,7 +58,7 @@
       "categoryId": 2
     },
     {
-      "id": 6,
+      "id": 8,
       "name": "Hamburguesa doble",
       "description": "Hamburguesa con tomate, lechuga, tocineta, ketchup y doble proteína de elección.",
       "price": 8500,
@@ -50,7 +66,7 @@
       "categoryId": 2
     },
     {
-      "id": 7,
+      "id": 9,
       "name": "Hamburguesa capresse",
       "description": "Deliciosa hamburguesa con queso mozarella, tomate y salsa pesto de la casa",
       "price": 7500,
@@ -58,7 +74,7 @@
       "categoryId": 2
     },
     {
-      "id": 8,
+      "id": 10,
       "name": "Papas fritas",
       "description": "Deliciosas papas fritas naturales con salsa de ajo.",
       "price": 3500,
@@ -66,7 +82,7 @@
       "categoryId": 3
     },
     {
-      "id": 9,
+      "id": 11,
       "name": "Aros de cebolla",
       "description": "Aros de cebolla naturales con salsa especial de la casa.",
       "price": 3500,
@@ -74,7 +90,7 @@
       "categoryId": 3
     },
     {
-      "id": 10,
+      "id": 12,
       "name": "Extra huevo",
       "description": "Huevo frito 1/und",
       "price": 1200,
@@ -82,7 +98,7 @@
       "categoryId": 3
     },
     {
-      "id": 11,
+      "id": 13,
       "name": "Extra queso",
       "description": "Adicional de queso mozarella",
       "price": 1200,
@@ -90,7 +106,7 @@
       "categoryId": 3
     },
     {
-      "id": 12,
+      "id": 14,
       "name": "Agua 500ml",
       "description": "Agua mineral sin gas 500ml",
       "price": 1000,
@@ -98,7 +114,7 @@
       "categoryId": 4
     },
     {
-      "id": 13,
+      "id": 15,
       "name":"Agua 750ml",
       "description": "Agua mineral sin gas 750ml",
       "price": 1500,
@@ -106,7 +122,7 @@
       "categoryId": 4
     },
     {
-      "id": 14,
+      "id": 16,
       "name": "Bebida 500ml",
       "description": "Gaseosa diferentes sabores",
       "price": 2000,
@@ -114,7 +130,7 @@
       "categoryId": 4
     },
     {
-      "id": 15,
+      "id": 17,
       "name": "Bebida 750ml",
       "description": "Gaseosa diferentes sabores",
       "price": 3200,
@@ -136,12 +152,12 @@
     {
       "id": 3,
       "code": "ACCOMPANIMENTS",
-      "name": { "es": "Para tomar", "en": "Accompaniments" }
+      "name": { "es": "Extras", "en": "Accompaniments" }
     },
     {
       "id": 4,
       "code": "BEVERAGES",
-      "name": { "es": "Acompañamientos", "en": "Beverages" }
+      "name": { "es": "Para tomar", "en": "Beverages" }
     }    
   ]
 }

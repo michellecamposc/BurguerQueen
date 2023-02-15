@@ -6,7 +6,7 @@ import { useContext } from 'react';
 import { MyContext } from '../context/MyContext';
 import { createOrder } from '../firebase/firebaseConfig';
 
-// Componente para seleccionar la mesa actual
+// Componente para seleccionar la mesa
 export const FirstBillSection = ({ item }) => {
 	const { clearAllProducts, selectedTable } = useContext(MyContext);
 	return (
@@ -25,7 +25,7 @@ export const FirstBillSection = ({ item }) => {
 	);
 };
 
-// Componente de productos añadidos
+// Componente para productos añadidos
 export const ProductCards = ({ addedProduct, item }) => {
 	const { name, price } = addedProduct;
 	const { handleAdd, counter, handleRemove } = useContext(MyContext);
@@ -53,7 +53,7 @@ export const ProductCards = ({ addedProduct, item }) => {
 	);
 };
 
-// Componente de boton de enviar orden
+// Componente de botón de enviar orden
 export const SendOrderButton = () => {
 	const { totalPrice } = useContext(MyContext);
 
@@ -67,9 +67,7 @@ export const SendOrderButton = () => {
 					</div>
 				</section>
 			</article>
-			<button className={styles.sendOrderButton} onClick={() => createOrder()}>
-				Enviar Orden
-			</button>
+			<button className={styles.sendOrderButton}>Enviar Orden</button>
 		</>
 	);
 };

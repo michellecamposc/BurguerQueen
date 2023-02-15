@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
+import { getFirestore, doc, setDoc, getDoc, addDoc, collection } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -19,17 +19,16 @@ export const db = getFirestore(app);
 
 
 // Función para agregar los pedidos a firebase
-const createOrder = async (tableNumber, items, id) => {
-  const saveOrder = await setDoc(doc(db, "commands"), {
+const createOrder = async (tableNumber, id, productList) => {
+  const saveOrder = await addDoc(collection(db, "commands"), {
     orderId: id,
     table: tableNumber,
-    product: items,
+    product: productList,
   });
   console.log("Visualizando la data", saveOrder);
 }
 
 export { createOrder }
-
 
 
 
