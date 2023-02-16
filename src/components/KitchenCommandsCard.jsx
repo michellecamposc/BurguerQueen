@@ -1,5 +1,5 @@
-import styles from '../styles/Kitchen.module.css';
 import { MdTimer } from 'react-icons/md';
+import styles from '../styles/Kitchen.module.css';
 
 export const CommandsCard = () => {
 	return (

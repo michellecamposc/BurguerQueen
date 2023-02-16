@@ -4,9 +4,8 @@ import { BsPlusLg } from 'react-icons/bs';
 import { IconContext } from 'react-icons/lib';
 import { useContext } from 'react';
 import { MyContext } from '../context/MyContext';
-import { createOrder } from '../firebase/firebaseConfig';
 
-// Componente para seleccionar la mesa
+// Componente donde se muestra la mesa seleccionada
 export const FirstBillSection = ({ item }) => {
 	const { clearAllProducts, selectedTable } = useContext(MyContext);
 	return (
@@ -50,24 +49,5 @@ export const ProductCards = ({ addedProduct, item }) => {
 				</section>
 			</section>
 		</IconContext.Provider>
-	);
-};
-
-// Componente de botón de enviar orden
-export const SendOrderButton = () => {
-	const { totalPrice } = useContext(MyContext);
-
-	return (
-		<>
-			<article className={styles.priceContainer}>
-				<section className={styles.informationContainer}>
-					<h3>Total</h3>
-					<div id={styles.price}>
-						<h3>${totalPrice()}</h3>
-					</div>
-				</section>
-			</article>
-			<button className={styles.sendOrderButton}>Enviar Orden</button>
-		</>
 	);
 };
