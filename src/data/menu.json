@@ -99,7 +99,7 @@
     },
     {
       "id": 13,
-      "name": "Extra queso",
+      "name": "Queso mozarella",
       "description": "Adicional de queso mozarella",
       "price": 1200,
       "image": "/queso.png",
@@ -107,6 +107,22 @@
     },
     {
       "id": 14,
+      "name": "Tocineta",
+      "description": "Adicional de tocineta",
+      "price": 1500,
+      "image": "/tocineta.png",
+      "categoryId": 3
+    },
+    {
+      "id": 15,
+      "name": "Tomate",
+      "description": "Adicional de tomate",
+      "price": 1500,
+      "image": "/tomate.png",
+      "categoryId": 3
+    },
+    {
+      "id": 16,
       "name": "Agua 500ml",
       "description": "Agua mineral sin gas 500ml",
       "price": 1000,
@@ -114,27 +130,43 @@
       "categoryId": 4
     },
     {
-      "id": 15,
-      "name":"Agua 750ml",
-      "description": "Agua mineral sin gas 750ml",
-      "price": 1500,
-      "image": "/agua.png",
-      "categoryId": 4
-    },
-    {
-      "id": 16,
-      "name": "Bebida 500ml",
-      "description": "Gaseosa diferentes sabores",
-      "price": 2000,
-      "image": "/public/gaseosa.png",
-      "categoryId": 4
-    },
-    {
       "id": 17,
-      "name": "Bebida 750ml",
-      "description": "Gaseosa diferentes sabores",
+      "name":"Fanta 500ml",
+      "description": "Gaseosa Fanta en lata",
+      "price": 1500,
+      "image": "/fanta.png",
+      "categoryId": 4
+    },
+    {
+      "id": 18,
+      "name": "Coca Cola 500ml",
+      "description": "Gaseosa coca-cola",
+      "price": 2000,
+      "image": "/gaseosa.png",
+      "categoryId": 4
+    },
+    {
+      "id": 19,
+      "name": "Sprite 500ml",
+      "description": "Gaseosa Sprite 500ml",
       "price": 3200,
-      "image": "/public/gaseosa.png",
+      "image": "/sprite.png",
+      "categoryId": 4
+    },
+    {
+      "id": 19,
+      "name": "Monster energy",
+      "description": "Bebida energizante",
+      "price": 2000,
+      "image": "/monster.png",
+      "categoryId": 4
+    },
+    {
+      "id": 19,
+      "name": "Agua con gas",
+      "description": "Agua mineral con gas 500ml",
+      "price": 2000,
+      "image": "/aguaConGas.png",
       "categoryId": 4
     }
   ],
