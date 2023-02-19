@@ -237,9 +237,10 @@
 /*Contenedor de productos*/
 
 #addedProducts {
-	height: 51%;
 	width: 93%;
-	margin: 2rem 0rem 2rem 0rem;
+	height: 58vh;
+	margin-bottom: 2rem;
+	padding: 0.8rem;
 	overflow-y: scroll;
 }
 

@@ -5,7 +5,7 @@
       "name": "Café americano",
       "description": "Café doble de carácter con notas de dulce caramelo y matices de verde silvestre.",
       "price": 3200,
-      "image": "/public/cafenegro.png",
+      "image": "/cafenegro.png",
       "categoryId": 1
 
     },
@@ -14,7 +14,7 @@
       "name": "Café con leche",
       "description": "Es un Café de carácter con sabor a avellanada con leche a elección del cliente.",
       "price": 3200,
-      "image":"/public/cafeconleche.png",
+      "image":"/cafeconleche.png",
       "categoryId": 1
     },
     {
@@ -22,7 +22,7 @@
       "name": "Sandwich de jamón y queso",
       "description": "Delicioso sandwich de jamón y queso mozarella en pan de masa madre.",
       "price": 5200,
-      "image": "/public/sandwichJ&Q.png",
+      "image": "/sandwichJ&Q.png",
       "categoryId": 1
     },
     {
@@ -30,7 +30,7 @@
       "name": "Jugo de frutas",
       "description": "Variedad de frutas naturales y orgánicas según la temporada.",
       "price": 2500,
-      "image": "/public/jugofrutas.png",
+      "image": "/jugofrutas.png",
       "categoryId": 1
     },
     {
@@ -38,7 +38,7 @@
       "name": "Café Irlandes",
       "description": "Es un Café de carácter con sabor a avellanada con leche a elección del cliente.",
       "price": 3000,
-      "image": "/public/cafeIrlandes.png",
+      "image": "/cafeIrlandes.png",
       "categoryId": 1
     },
     {
@@ -46,7 +46,7 @@
       "name": "Chocolate caliente",
       "description": "Cacao en polvo con leche descremada y un toque de canela en polvo.",
       "price": 2500,
-      "image": "/public/chocolate.png",
+      "image": "/chocolate.png",
       "categoryId": 1
     },
     {
@@ -54,7 +54,7 @@
       "name": "Hamburguesa simple",
       "description": "Hamburguesa con tomate, lechuga, cebolla, salsa de tomate y proteína elección",
       "price": 6000,
-      "image": "/public/dobleburguer.png",
+      "image": "/dobleburguer.png",
       "categoryId": 2
     },
     {
@@ -62,7 +62,7 @@
       "name": "Hamburguesa doble",
       "description": "Hamburguesa con tomate, lechuga, tocineta, ketchup y doble proteína de elección.",
       "price": 8500,
-      "image": "/public/simpleburguer.png",
+      "image": "/simpleburguer.png",
       "categoryId": 2
     },
     {
@@ -70,7 +70,7 @@
       "name": "Hamburguesa capresse",
       "description": "Deliciosa hamburguesa con queso mozarella, tomate y salsa pesto de la casa",
       "price": 7500,
-      "image": "/public/simpleburguer.png",
+      "image": "/simpleburguer.png",
       "categoryId": 2
     },
     {
@@ -78,7 +78,7 @@
       "name": "Papas fritas",
       "description": "Deliciosas papas fritas naturales con salsa de ajo.",
       "price": 3500,
-      "image": "/public/papasfritas.png",
+      "image": "/papasfritas.png",
       "categoryId": 3
     },
     {
@@ -86,7 +86,7 @@
       "name": "Aros de cebolla",
       "description": "Aros de cebolla naturales con salsa especial de la casa.",
       "price": 3500,
-      "image": "/public/aros.png",
+      "image": "/aros.png",
       "categoryId": 3
     },
     {
@@ -94,7 +94,7 @@
       "name": "Extra huevo",
       "description": "Huevo frito 1/und",
       "price": 1200,
-      "image": "/public/huevo.png",
+      "image": "/huevo.png",
       "categoryId": 3
     },
     {
@@ -102,7 +102,7 @@
       "name": "Extra queso",
       "description": "Adicional de queso mozarella",
       "price": 1200,
-      "image": "/public/queso.png",
+      "image": "/queso.png",
       "categoryId": 3
     },
     {
@@ -110,7 +110,7 @@
       "name": "Agua 500ml",
       "description": "Agua mineral sin gas 500ml",
       "price": 1000,
-      "image": "/public/agua.png",
+      "image": "/agua.png",
       "categoryId": 4
     },
     {
@@ -118,7 +118,7 @@
       "name":"Agua 750ml",
       "description": "Agua mineral sin gas 750ml",
       "price": 1500,
-      "image": "/public/agua.png",
+      "image": "/agua.png",
       "categoryId": 4
     },
     {

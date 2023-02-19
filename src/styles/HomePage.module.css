@@ -9,7 +9,7 @@
 
 #homeContainer {
 	align-items: center;
-	background-image: url('public/backgroundHome.jpg');
+	background-image: url('/backgroundHome.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;

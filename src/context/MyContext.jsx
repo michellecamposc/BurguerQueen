@@ -8,8 +8,8 @@ export const MyContextProvider = ({ children }) => {
 	// State para seleccionar la mesa
 	const [selectedTable, setSelectedTable] = useState('');
 
-  // State to store selected category
-  const [selectedCategory, setSelectedCategory] = useState('');
+	// State to store selected category
+	const [selectedCategory, setSelectedCategory] = useState('');
 
 	// State para añadir productos al carrito
 	const [addedProduct, setAddedProduct] = useState([]);
@@ -19,13 +19,13 @@ export const MyContextProvider = ({ children }) => {
 		setAddedProduct(addedProduct.filter((product) => product.id !== item));
 	};
 
-	// Contador para agregar más productos desde la orden
+	// Contador y función para sumar más productos desde el carrito
 	const [counter, setCounter] = useState(1);
 	const handleAdd = () => {
 		setCounter(counter + 1);
 	};
 
-	// Contador para agregar más productos desde la orden
+	// Función eliminar productos de la orden
 	const handleRemove = () => {
 		setCounter(counter - 1);
 	};
@@ -48,8 +48,8 @@ export const MyContextProvider = ({ children }) => {
 		handleAdd,
 		counter,
 		handleRemove,
-    selectedCategory,
-    setSelectedCategory
+		selectedCategory,
+		setSelectedCategory,
 	};
 
 	return <MyContext.Provider value={props}>{children}</MyContext.Provider>;

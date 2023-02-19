@@ -5,7 +5,7 @@ export const HomePage = () => {
 	return (
 		<div id={styles.homeContainer}>
 			<section id={styles.buttonsHomeContainer}>
-				<img src='public/dejaBurgLogo.png' />
+				<img src='/dejaBurgLogo.png' />
 				<Link to='order'>
 					<button id={styles.orderBtn}>Tomar pedido</button>
 				</Link>
