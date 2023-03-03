@@ -1,10 +1,11 @@
 import styles from '../styles/TakeOrder.module.css';
 import { useContext } from 'react';
 import { MyContext } from '../context/MyContext';
+import { newOrder } from '../firebase/firebaseConfig';
 
 // Componente de botón de enviar orden
 export const SendOrderButton = () => {
-	const { totalPrice } = useContext(MyContext);
+	const { totalPrice, addedProduct } = useContext(MyContext);
 
 	return (
 		<>
@@ -16,7 +17,12 @@ export const SendOrderButton = () => {
 					</div>
 				</section>
 			</article>
-			<button className={styles.sendOrderButton}>Enviar Orden</button>
+			<button
+				className={styles.sendOrderButton}
+				onClick={() => newOrder(addedProduct)}
+			>
+				Enviar Orden
+			</button>
 		</>
 	);
 };

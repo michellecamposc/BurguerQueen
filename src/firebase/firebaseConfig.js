@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, doc, setDoc, getDoc, addDoc, collection } from "firebase/firestore";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -13,24 +13,25 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-// Initialize cloud Firestore
-export const db = getFirestore(app);
+// Add a new order to the collection 
+const newOrder = async (addedProducts) => {
+  try {
+    const orderCollectionRef = collection(db, "order");
 
+    // Iterate over the array of added products and add them as documents
+    addedProducts.forEach(async (addedProduct) => {
+      await addDoc(orderCollectionRef, {
+        producto: addedProduct.name,
+        precio: addedProduct.price,
+      });
+    });
 
-// Función para agregar los pedidos a firebase
-const createOrder = async (tableNumber, id, productList) => {
-  const saveOrder = await addDoc(collection(db, "commands"), {
-    orderId: id,
-    table: tableNumber,
-    product: productList,
-  });
-  console.log("Visualizando la data", saveOrder);
-}
+    console.log("Orden creada correctamente");
+  } catch (e) {
+    console.error("Error al crear la orden: ", e);
+  }
+};
 
-export { createOrder }
-
-
-
-
-
+export { newOrder };
