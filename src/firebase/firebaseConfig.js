@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, addDoc, collection } from "firebase/firestore";
+import { getFirestore, addDoc, collection, getDocs } from "firebase/firestore";
+
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -29,7 +30,7 @@ const newOrder = async (addedProducts, selectedTable, clearCartWhenSendOrder, cl
     };
     await addDoc(orderCollectionRef, orderData);
     console.log("Orden creada correctamente");
-    // Clear the container when you send the new order
+    // Clear container when you send the new order
     clearCartWhenSendOrder()
     clearSelectedTable()
 
@@ -37,4 +38,13 @@ const newOrder = async (addedProducts, selectedTable, clearCartWhenSendOrder, cl
     console.error("Error al crear la orden: ", e);
   }
 };
-export { newOrder };
+
+const getOrders = async () => {
+  const ordersCollectionRef = collection(db, "order");
+  const ordersSnapshot = await getDocs(ordersCollectionRef);
+  const orders = ordersSnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+  return orders;
+};
+
+export { newOrder, getOrders, db };
+
