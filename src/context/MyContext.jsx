@@ -38,6 +38,16 @@ export const MyContextProvider = ({ children }) => {
 		return sum;
 	};
 
+	// Empty container when you send the order
+	const clearCartWhenSendOrder = () => {
+		setAddedProduct([]);
+	};
+
+	// Empty table container when you send the order
+	const clearSelectedTable = () => {
+		setSelectedTable([]);
+	};
+
 	const props = {
 		selectedTable,
 		setSelectedTable,
@@ -50,6 +60,8 @@ export const MyContextProvider = ({ children }) => {
 		handleRemove,
 		selectedCategory,
 		setSelectedCategory,
+		clearCartWhenSendOrder,
+		clearSelectedTable,
 	};
 
 	return <MyContext.Provider value={props}>{children}</MyContext.Provider>;

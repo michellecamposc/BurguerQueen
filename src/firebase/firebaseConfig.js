@@ -16,24 +16,25 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // Add a new order to the collection 
-const newOrder = async (addedProducts) => {
+const newOrder = async (addedProducts, selectedTable, clearCartWhenSendOrder, clearSelectedTable) => {
   try {
     const orderCollectionRef = collection(db, "order");
-    // Iterate over the array of added products and add them as documents
-    addedProducts.forEach(async (addedProduct) => {
-      await addDoc(orderCollectionRef, {
-        producto: addedProduct.name,
+    const orderData = {
+      mesa: selectedTable,
+      productos: addedProducts.map((addedProduct) => ({
+        nombre: addedProduct.name,
         precio: addedProduct.price,
-      });
-    });
+      })),
 
+    };
+    await addDoc(orderCollectionRef, orderData);
     console.log("Orden creada correctamente");
+    // Clear the container when you send the new order
+    clearCartWhenSendOrder()
+    clearSelectedTable()
+
   } catch (e) {
     console.error("Error al crear la orden: ", e);
   }
 };
-
-
-
-
 export { newOrder };

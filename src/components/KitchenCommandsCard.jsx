@@ -1,4 +1,3 @@
-import { MdTimer } from 'react-icons/md';
 import styles from '../styles/Kitchen.module.css';
 
 export const CommandsCard = () => {
@@ -6,10 +5,6 @@ export const CommandsCard = () => {
 		<div id={styles.CommandsCardContainer}>
 			<section id={styles.timerContainer}>
 				<h2>Mesa 2</h2>
-				<h2>
-					<MdTimer />
-					5:00
-				</h2>
 			</section>
 			<section id={styles.productAndAmount}>
 				<h3>Producto</h3>

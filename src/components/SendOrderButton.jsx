@@ -5,7 +5,13 @@ import { newOrder } from '../firebase/firebaseConfig';
 
 // Submit order button component
 export const SendOrderButton = () => {
-	const { totalPrice, addedProduct } = useContext(MyContext);
+	const {
+		totalPrice,
+		addedProduct,
+		clearCartWhenSendOrder,
+		selectedTable,
+		clearSelectedTable,
+	} = useContext(MyContext);
 
 	return (
 		<>
@@ -19,7 +25,14 @@ export const SendOrderButton = () => {
 			</article>
 			<button
 				className={styles.sendOrderButton}
-				onClick={() => newOrder(addedProduct)}
+				onClick={() =>
+					newOrder(
+						addedProduct,
+						selectedTable,
+						clearCartWhenSendOrder,
+						clearSelectedTable
+					)
+				}
 			>
 				Enviar Orden
 			</button>
