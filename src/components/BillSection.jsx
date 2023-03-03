@@ -5,7 +5,7 @@ import { IconContext } from 'react-icons/lib';
 import { useContext } from 'react';
 import { MyContext } from '../context/MyContext';
 
-// Componente donde se muestra la mesa seleccionada
+// Component where the selected table is displayed
 export const FirstBillSection = ({ item }) => {
 	const { clearAllProducts, selectedTable } = useContext(MyContext);
 	return (
@@ -24,7 +24,7 @@ export const FirstBillSection = ({ item }) => {
 	);
 };
 
-// Componente para productos añadidos
+// Component for added products
 export const ProductCards = ({ addedProduct, item }) => {
 	const { name, price } = addedProduct;
 	const { handleAdd, counter, handleRemove } = useContext(MyContext);

@@ -8,7 +8,7 @@ export const ProductCard = ({ item }) => {
 	const { name, price, description, image } = item;
 	const { addedProduct, setAddedProduct } = useContext(MyContext);
 
-	// Función para añadir productos al carrito
+	// Function to add products to cart
 	const addItem = () => setAddedProduct([...addedProduct, { name, price }]);
 	return (
 		<section className={styles.productCard}>

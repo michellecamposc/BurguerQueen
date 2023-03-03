@@ -50,7 +50,7 @@
 	width: 7rem;
 }
 
-/* Contenedores de los productos*/
+/* Product container*/
 
 #menuContainer {
 	display: flex;
@@ -72,7 +72,7 @@
 	justify-content: center;
 }
 
-/* Seleccionar mesa style */
+/* Selected table styles */
 
 .tableSection {
 	margin: 3.5rem 0rem 0rem 1.128rem;
@@ -105,7 +105,7 @@
 	margin-right: 1.5rem;
 }
 
-/* Seleccionar menu style */
+/* Select menu style */
 .menuButton {
 	background: linear-gradient(90deg, #ede574 0%, #e1f5c4 100%);
 	border-radius: 0.625rem;
@@ -117,7 +117,7 @@
 	margin-right: 1.5rem;
 }
 
-/* Tarjetas de productos */
+/* Product card */
 .productCard {
 	background: rgba(255, 255, 255, 0.78);
 	border-radius: 0.625rem;
@@ -181,7 +181,7 @@
 	margin-top: 1rem;
 }
 
-/* Sección de cuenta */
+/* Bill section */
 
 #billContainer {
 	background: rgba(16, 16, 16, 1);
@@ -234,7 +234,7 @@
 	background-color: rgba(35, 35, 35, 1);
 	border: none;
 }
-/*Contenedor de productos*/
+/*Products container*/
 
 #addedProducts {
 	width: 93%;
@@ -296,7 +296,7 @@
 	width: 1.875rem;
 }
 
-/* Sección de total*/
+/* Total section */
 #totalContainer {
 	flex-direction: column;
 	display: flex;

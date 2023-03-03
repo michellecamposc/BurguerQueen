@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { MyContext } from '../context/MyContext';
 import { newOrder } from '../firebase/firebaseConfig';
 
-// Componente de botón de enviar orden
+// Submit order button component
 export const SendOrderButton = () => {
 	const { totalPrice, addedProduct } = useContext(MyContext);
 

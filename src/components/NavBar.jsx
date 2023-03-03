@@ -2,7 +2,7 @@ import styles from '../styles/TakeOrder.module.css';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-//  Componente de barra de navegación
+// Navbar component
 export const NavBar = () => {
 	return (
 		<section id={styles.headerContainer}>

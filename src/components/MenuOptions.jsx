@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { MyContext } from '../context/MyContext';
 import db from '../data/menu.json';
 
-//  Componente con las opciones de menú
+// Component with the menu options
 export const MenuOptions = () => {
 	const { setSelectedCategory } = useContext(MyContext);
 	const lng = 'es';

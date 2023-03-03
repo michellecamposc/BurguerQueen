@@ -1,36 +1,36 @@
 import { createContext, useState } from 'react';
 
-// Almacena los datos
+// Store the data
 export const MyContext = createContext();
 
-// Este es el componente que engloba al resto de componentes
+// This is the component that encompasses the rest of the components
 export const MyContextProvider = ({ children }) => {
-	// State para seleccionar la mesa
+	// State to select the table
 	const [selectedTable, setSelectedTable] = useState('');
 
 	// State to store selected category
 	const [selectedCategory, setSelectedCategory] = useState('');
 
-	// State para añadir productos al carrito
+	// State to add products to cart
 	const [addedProduct, setAddedProduct] = useState([]);
 
-	// Función para borras todos los productos del carrito
+	// Function to delete all products from the cart
 	const clearAllProducts = (item) => {
 		setAddedProduct(addedProduct.filter((product) => product.id !== item));
 	};
 
-	// Contador y función para sumar más productos desde el carrito
+	// Counter and function to add more products from the cart
 	const [counter, setCounter] = useState(1);
 	const handleAdd = () => {
 		setCounter(counter + 1);
 	};
 
-	// Función eliminar productos de la orden
+	// Function remove products from the order
 	const handleRemove = () => {
 		setCounter(counter - 1);
 	};
 
-	// Calcular el total del carrito
+	// Calculate the cart total
 	const totalPrice = () => {
 		const reducer = (totalAcc, addedProduct) =>
 			totalAcc + addedProduct.price * counter;

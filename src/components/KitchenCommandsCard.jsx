@@ -23,7 +23,7 @@ export const CommandsCard = () => {
 	);
 };
 
-// Componente que muestra cada plato a cocinar
+// Component that shows each dish to cook
 export const ItemsContainer = () => {
 	<section id={styles.orderContainer}>
 		<article id={styles.productContainer}>

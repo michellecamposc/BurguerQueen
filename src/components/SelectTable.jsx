@@ -4,7 +4,7 @@ import { FaUserAlt } from 'react-icons/fa';
 import { useContext } from 'react';
 import { MyContext } from '../context/MyContext';
 
-//  Componente para seleccionar mesas
+// Component to select tables
 export const SelectTable = () => {
 	const { setSelectedTable } = useContext(MyContext);
 	return (

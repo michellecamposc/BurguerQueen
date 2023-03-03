@@ -19,7 +19,6 @@ const db = getFirestore(app);
 const newOrder = async (addedProducts) => {
   try {
     const orderCollectionRef = collection(db, "order");
-
     // Iterate over the array of added products and add them as documents
     addedProducts.forEach(async (addedProduct) => {
       await addDoc(orderCollectionRef, {
@@ -33,5 +32,8 @@ const newOrder = async (addedProducts) => {
     console.error("Error al crear la orden: ", e);
   }
 };
+
+
+
 
 export { newOrder };
