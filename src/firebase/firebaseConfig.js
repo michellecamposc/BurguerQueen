@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, addDoc, collection, getDocs } from "firebase/firestore";
+import { getFirestore, addDoc, collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 
 
 // Your web app's Firebase configuration
@@ -38,6 +38,7 @@ const newOrder = async (addedProducts, selectedTable, clearCartWhenSendOrder, cl
     console.error("Error al crear la orden: ", e);
   }
 };
+
 // Get data from firestore to print the information in the kitchen
 const getOrders = async () => {
   const ordersCollectionRef = collection(db, "order");
@@ -46,5 +47,15 @@ const getOrders = async () => {
   return orders;
 };
 
-export { newOrder, getOrders, db };
+// Remove order in kitchen and firestore
+const deleteOrder = async (orderId) => {
+  try {
+    await deleteDoc(doc(db, 'order', orderId));
+    console.log(`Pedido ${orderId} eliminado correctamente`);
+  } catch (error) {
+    console.error('Error al eliminar el pedido:', error);
+  }
+};
+
+export { newOrder, getOrders, db, deleteOrder };
 

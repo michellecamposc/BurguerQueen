@@ -8,7 +8,12 @@ export const ItemsContainer = ({ addedProducts, id }) => {
 					key={`${id}-${addedProduct.nombre}-${index}`}
 					id={styles.productContainer}
 				>
-					<h3>{addedProduct.nombre}</h3>
+					<section id={styles.productContainer}>
+						<h3>{addedProduct.nombre}</h3>
+					</section>
+					<section id={styles.amountContainer}>
+						<h3>{addedProduct.precio}</h3>
+					</section>
 				</article>
 			))}
 		</section>
