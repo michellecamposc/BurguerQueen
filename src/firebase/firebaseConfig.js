@@ -23,6 +23,7 @@ const newOrder = async (addedProducts, selectedTable, clearCartWhenSendOrder, cl
     const orderData = {
       mesa: selectedTable,
       productos: addedProducts.map((addedProduct) => ({
+        orderId: addedProduct.id,
         nombre: addedProduct.name,
         precio: addedProduct.price,
       })),
@@ -39,6 +40,7 @@ const newOrder = async (addedProducts, selectedTable, clearCartWhenSendOrder, cl
   }
 };
 
+// Get data from firestore to print the information in the kitchen
 const getOrders = async () => {
   const ordersCollectionRef = collection(db, "order");
   const ordersSnapshot = await getDocs(ordersCollectionRef);

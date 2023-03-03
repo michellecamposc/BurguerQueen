@@ -46,7 +46,7 @@
 #kitchenCommandsContainer {
 	display: flex;
 	width: 100%;
-	height: 80vh;
+	height: 70%;
 	justify-content: center;
 	flex-direction: row;
 }
@@ -59,14 +59,15 @@
 	display: flex;
 	flex-direction: column;
 	margin: 5rem;
+	height: 26rem;
 }
 
-#timerContainer {
+#tableContainer {
 	width: 26.179rem;
 	background: linear-gradient(90deg, #76b852 0%, #8dc26f 100%);
 	height: 3.788rem;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 }
 
@@ -89,7 +90,7 @@
 	margin: 1rem;
 	display: flex;
 	flex-direction: row;
-	height: 45%;
+	height: 70%;
 }
 
 #productContainer {

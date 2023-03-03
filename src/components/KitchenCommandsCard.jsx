@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getOrders } from '../firebase/firebaseConfig'; // importa la función que definiste para obtener las comandas desde Firebase
+import { getOrders } from '../firebase/firebaseConfig';
 import { ItemsContainer } from '../components/ItemsContainer';
 import styles from '../styles/Kitchen.module.css';
 
@@ -19,14 +19,14 @@ export const CommandsCard = () => {
 		<div id={styles.CommandsCardContainer}>
 			{orders.map((order) => (
 				<div key={order.id}>
-					<section id={styles.timerContainer}>
-						<h2>Mesa {order.table}</h2>
+					<section id={styles.tableContainer}>
+						<h2>Mesa {order.mesa}</h2>
 					</section>
 					<section id={styles.productAndAmount}>
 						<h3>Producto</h3>
 						<h3>Cantidad</h3>
 					</section>
-					<ItemsContainer products={order.products} />
+					<ItemsContainer key={order.id} addedProducts={order.productos} />
 					<section id={styles.readyBtnContainer}>
 						<button id={styles.readyBtn}>Pedido listo</button>
 					</section>
