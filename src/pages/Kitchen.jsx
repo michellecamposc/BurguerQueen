@@ -1,4 +1,4 @@
-import { CommandsCard } from '../components/KitchenCommandsCard';
+import { CommandsCard } from '../components/CommandsCard';
 import { KitchenHeader } from '../components/KitchenHeader';
 import styles from '../styles/Kitchen.module.css';
 import { useEffect, useState } from 'react';

@@ -16,30 +16,28 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Add a new order to the collection 
+// Add a new order to the collection
 const newOrder = async (addedProducts, selectedTable, clearCartWhenSendOrder, clearSelectedTable) => {
   try {
     const orderCollectionRef = collection(db, "order");
     const orderData = {
       mesa: selectedTable,
       productos: addedProducts.map((addedProduct) => ({
-        orderId: addedProduct.id,
         nombre: addedProduct.name,
         precio: addedProduct.price,
       })),
-
     };
-    await addDoc(orderCollectionRef, orderData);
-    console.log("Orden creada correctamente");
+    const docRef = await addDoc(orderCollectionRef, orderData);
+    console.log("Orden creada correctamente con el ID:", docRef.id);
     // Clear container when you send the new order
-    clearCartWhenSendOrder()
-    clearSelectedTable()
+    clearCartWhenSendOrder();
+    clearSelectedTable();
 
+    return docRef.id; // return the document id
   } catch (e) {
     console.error("Error al crear la orden: ", e);
   }
 };
-
 // Get data from firestore to print the information in the kitchen
 const getOrders = async () => {
   const ordersCollectionRef = collection(db, "order");

@@ -1,11 +1,14 @@
 import styles from '../styles/Kitchen.module.css';
 
-export const ItemsContainer = ({ addedProducts }) => {
+export const ItemsContainer = ({ addedProducts, id }) => {
 	return (
 		<section id={styles.orderContainer}>
-			{addedProducts.map((addedProduct) => (
-				<article key={addedProduct.id} id={styles.productContainer}>
-					<h3>{addedProduct.name}</h3>
+			{addedProducts.map((addedProduct, index) => (
+				<article
+					key={`${id}-${addedProduct.nombre}-${index}`}
+					id={styles.productContainer}
+				>
+					<h3>{addedProduct.nombre}</h3>
 				</article>
 			))}
 		</section>
