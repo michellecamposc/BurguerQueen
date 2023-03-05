@@ -41,7 +41,11 @@ export const TakeOrder = () => {
 					<div id={styles.addedProducts}>
 						<div id={styles.addedProducts}>
 							{addedProduct.map((item, index) => (
-								<ProductCards key={index} addedProduct={item} />
+								<ProductCards
+									key={index}
+									item={item}
+									addedProduct={addedProduct}
+								/>
 							))}
 						</div>
 					</div>

@@ -3,13 +3,28 @@ import { BsPlusCircleFill } from 'react-icons/bs';
 import { useContext } from 'react';
 import { MyContext } from '../context/MyContext';
 
-// Tarjeta para desayuno, para tomar y agregrados
+// Product card
 export const ProductCard = ({ item }) => {
 	const { name, price, description, image } = item;
 	const { addedProduct, setAddedProduct } = useContext(MyContext);
 
 	// Function to add products to cart
-	const addItem = () => setAddedProduct([...addedProduct, { name, price }]);
+	const addItem = () => {
+		const existingProduct = addedProduct.find((p) => p.name === name);
+		if (existingProduct) {
+			const updatedProduct = {
+				...existingProduct,
+				quantity: existingProduct.quantity + 1,
+			};
+			setAddedProduct([
+				...addedProduct.filter((p) => p !== existingProduct),
+				updatedProduct,
+			]);
+		} else {
+			setAddedProduct([...addedProduct, { name, price, quantity: 1 }]);
+		}
+	};
+
 	return (
 		<section className={styles.productCard}>
 			<div className={styles.imageAndButtonContainer}>

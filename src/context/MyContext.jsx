@@ -21,19 +21,11 @@ export const MyContextProvider = ({ children }) => {
 
 	// Counter and function to add more products from the cart
 	const [counter, setCounter] = useState(1);
-	const handleAdd = () => {
-		setCounter(counter + 1);
-	};
-
-	// Function remove products from the order
-	const handleRemove = () => {
-		setCounter(counter - 1);
-	};
 
 	// Calculate the cart total
 	const totalPrice = () => {
 		const reducer = (totalAcc, addedProduct) =>
-			totalAcc + addedProduct.price * counter;
+			totalAcc + addedProduct.price * addedProduct.quantity;
 		const sum = addedProduct.reduce(reducer, 0);
 		return sum;
 	};
@@ -55,9 +47,7 @@ export const MyContextProvider = ({ children }) => {
 		setAddedProduct,
 		clearAllProducts,
 		totalPrice,
-		handleAdd,
 		counter,
-		handleRemove,
 		selectedCategory,
 		setSelectedCategory,
 		clearCartWhenSendOrder,

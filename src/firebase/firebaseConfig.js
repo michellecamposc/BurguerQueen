@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, addDoc, collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyA4jsO5layVVQacJSa3RRInEoMgQ-bekuM",
@@ -39,6 +38,7 @@ const newOrder = async (addedProducts, selectedTable, clearCartWhenSendOrder, cl
   }
 };
 
+
 // Get data from firestore to print the information in the kitchen
 const getOrders = async () => {
   const ordersCollectionRef = collection(db, "order");
@@ -47,7 +47,8 @@ const getOrders = async () => {
   return orders;
 };
 
-// Remove order in kitchen and firestore
+
+// Remove order in the kitchen and firestore
 const deleteOrder = async (orderId) => {
   try {
     await deleteDoc(doc(db, 'order', orderId));
