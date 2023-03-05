@@ -29,17 +29,18 @@ export const ProductCards = ({ item }) => {
 	const { name, price } = item;
 	const { addedProduct, setAddedProduct } = useContext(MyContext);
 
-	// Add a single quantity status
+	// Add an individual quantity status
 	const [quantity, setQuantity] = useState(
 		addedProduct.find((p) => p.id === item.id)?.quantity || 0
 	);
 
+	// Function to add products from the cart
 	const handleAdd = (item) => {
 		console.log('Se ejecuta');
 		setAddedProduct((prev) => {
 			const index = prev.findIndex((p) => p.id === item.id);
 			if (index >= 0) {
-				prev[index].quantity = quantity + 1; // Update the quantity of the product in the array
+				prev[index].quantity = quantity + 1; // Update the quantity of the product in the arrangement
 			} else {
 				prev.push({ id: item.id, quantity: quantity + 1 }); // Add a new object with the quantity of the product
 			}
@@ -49,19 +50,26 @@ export const ProductCards = ({ item }) => {
 		setQuantity(quantity + 1); // Update individual quantity status
 	};
 
-	const handleDecrease = (item) => {
+	// Function to remove products from the cart
+	const handleRemove = (item) => {
 		console.log('Se ejecuta');
 		setAddedProduct((prev) => {
 			const index = prev.findIndex((p) => p.id === item.id);
 			if (index >= 0) {
-				prev[index].quantity = quantity - 1; // Actualizar la cantidad del producto en el arreglo
+				if (quantity === 1) {
+					prev.splice(index, 1); // Remove the product from the array
+				} else {
+					prev[index].quantity = quantity - 1; // Update the quantity of the product in the array
+				}
 			} else {
-				prev.push({ id: item.id, quantity: quantity - 1 }); // Agregar un nuevo objeto con la cantidad del producto
+				prev.push({ id: item.id, quantity: quantity - 1 }); // Add a new object with the quantity of the product
 			}
 			return [...prev];
 		});
 
-		setQuantity(quantity - 1); // Actualizar el estado de cantidad individual
+		if (quantity > 1) {
+			setQuantity(quantity - 1); // Update individual quantity status
+		}
 	};
 
 	return (
@@ -74,7 +82,7 @@ export const ProductCards = ({ item }) => {
 				<section className={styles.firstBtnContainer}>
 					<section className={styles.btnsContainer}>
 						<button className={styles.addAndDeleteButton}>
-							<FaMinus onClick={() => handleDecrease(item)} />
+							<FaMinus onClick={() => handleRemove(item)} />
 						</button>
 						<h3>{quantity}</h3>
 						<button className={styles.addAndDeleteButton}>

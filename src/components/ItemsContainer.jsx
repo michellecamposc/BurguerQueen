@@ -12,7 +12,7 @@ export const ItemsContainer = ({ addedProducts, id }) => {
 						<h3>{addedProduct.nombre}</h3>
 					</section>
 					<section id={styles.amountContainer}>
-						<h3>{addedProduct.precio}</h3>
+						<h3>x{addedProduct.cantidad}</h3>
 					</section>
 				</article>
 			))}

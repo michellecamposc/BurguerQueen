@@ -23,7 +23,7 @@ const newOrder = async (addedProducts, selectedTable, clearCartWhenSendOrder, cl
       mesa: selectedTable,
       productos: addedProducts.map((addedProduct) => ({
         nombre: addedProduct.name,
-        precio: addedProduct.price,
+        cantidad: addedProduct.quantity,
       })),
     };
     const docRef = await addDoc(orderCollectionRef, orderData);
